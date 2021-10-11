@@ -111,15 +111,11 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
-    /* .portfolio-section .portfolio-filter {
-        padding: 0 70px;
-    } */
 }
 
 @media screen and (max-width: 480px) {
     .home-section .full-screen {
         padding: 0;
-        min-height: 650px;
     }
     .home-section .home-text,
     .home-section .home-img,
