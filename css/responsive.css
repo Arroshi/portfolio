@@ -115,6 +115,9 @@
 }
 
 @media screen and (max-width: 480px) {
+    .home-section .full-screen {
+        padding: 0;
+    }
     .home-section .home-text,
     .home-section .home-img,
     .portfolio-popup .description,
