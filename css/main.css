@@ -1,0 +1,59 @@
+@import "../css/style.css";
+@import "../css/fonts.css";
+@import "../css/style-switcher.css";
+@import "../css/responsive.css";
+
+/*  */
+
+:root {
+    /* THEMES */
+    --color-theme: #eff0f4;
+    /* OPACITY */
+    --bg--opacity: rgba (255, 255, 255, 0.5);
+    /* COLORS */
+    --color-other: #909090;
+    --color-prin: #808080;
+    --color-sec: #ffa6ba;
+    --color-ter: #e0e0e0;
+    /* COLORS SHADOWS */
+    --shadow-1-1: #d0d0d0;
+    --shadow-1-2: #f8f8f8;
+    /* SHADOWS */
+    --outer-shadow: 3px 3px 3px var(--shadow-1-1), -3px -3px 3px var(--shadow-1-2);
+    --outer-shadow-0: 0 0 0 var(--shadow-1-1), 0 0 0 var(--shadow-1-2);
+    --inner-shadow: inset 3px 3px 3px var(--shadow-1-1), inset -3px -3px 3px var(--shadow-1-2);
+    --inner-shadow-0: inset 0 0 0 var(--shadow-1-1), inset 0 0 0 var(--shadow-1-2);
+    /* FONTS */
+    --Gagalin: Gagalin;
+    --Blogger: Blogger;
+    --Glitch: Glitch;
+    --Drawing: Drawing;
+}
+
+
+/*  */
+
+
+/* DARK MODE */
+
+body.dark {
+    /* THEMES */
+    --color-theme: #101010;
+    /* OPACITY */
+    --bg--opacity: rgba (43, 44, 47, 0.5);
+    /* COLORS */
+    --color-other: #909090;
+    --color-prin: #b0b8bf;
+    --color-sec: #ffb400;
+    --color-ter: #191919;
+    /* COLORS SHADOWS */
+    --shadow-1-1: #0a0a0a;
+    --shadow-1-2: #191919;
+    --outer-shadow: 3px 3px 3px var(--shadow-1-1), -3px -3px 3px var(--shadow-1-2);
+    --outer-shadow-0: 0 0 0 var(--shadow-1-1), 0 0 0 var(--shadow-1-2);
+    --inner-shadow: inset 3px 3px 3px var(--shadow-1-1), inset -3px -3px 3px var(--shadow-1-2);
+    --inner-shadow-0: inset 0 0 0 var(--shadow-1-1), inset 0 0 0 var(--shadow-1-2);
+}
+
+
+/*  */
