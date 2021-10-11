@@ -25,8 +25,8 @@
         max-width: 100%;
     }
     .about-section .about-img {
-        flex: 0 0 60%;
-        max-width: 60%;
+        flex: 0 0 75%;
+        max-width: 75%;
     }
     .home-section .home-img {
         max-width: 90%;
