@@ -1203,16 +1203,16 @@
         position: fixed;
         left: 0;
         top: 0;
-        height: 50%;
-        width: 50%;
+        height: 100%;
+        width: 100%;
         z-index: 1005;
         color: var(--bg--opacity);
-        color: gray;
+        background-color: var(--color-theme);
         display: flex;
         align-items: center;
         justify-content: center;
-        visibility: hidden;
-        opacity: 0;
+        /* visibility: hidden;
+        opacity: 0; */
     }
     
     .portfolio-popup .pp-loader.active {
@@ -1224,7 +1224,7 @@
         width: 40px;
         height: 40px;
         border: 3px solid var(--color-prin);
-        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+        border-radius: 50%;
         border-right: 3px solid transparent;
         animation: spin 2s linear infinite;
     }
