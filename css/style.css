@@ -612,7 +612,8 @@
         position: absolute;
         height: 40px;
         width: 40px;
-        bottom: 10px;
+        bottom: 15px;
+        left: 15px;
         margin-left: 15px;
         text-align: center;
         font-size: 20px;
@@ -620,6 +621,7 @@
         cursor: pointer;
         transition: all .3s ease;
         border-radius: 15%;
+        display: block;
     }
     
     .nav-menu .s-icon::after {
