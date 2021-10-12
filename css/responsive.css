@@ -1,12 +1,12 @@
 @media (max-width: 1120px) {
     .home-section .home-text {
-        padding: 0 50px;
+        padding: 30px 50px;
     }
     .about-section .about-info {
         padding: 25px 50px;
     }
     .home-section .home-img {
-        padding: 50px 0 0;
+        padding: 50px 0 25px;
     }
     .about-section .about-img {
         flex: 0 0 40%;
