@@ -727,7 +727,7 @@
         text-align: center;
         line-height: 40px;
         color: var(--color-prin);
-        margin: 0 20px;
+        margin: 0 17px;
         border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
         transition: all 0.3s ease;
     }
