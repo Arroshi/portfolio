@@ -38,7 +38,7 @@
 
 body.dark {
     /* THEMES */
-    --color-theme: #101010;
+    --color-theme: #131313;
     /* OPACITY */
     --bg--opacity: rgba (43, 44, 47, 0.5);
     /* COLORS */
@@ -47,7 +47,7 @@ body.dark {
     --color-sec: #ffb400;
     --color-ter: #191919;
     /* COLORS SHADOWS */
-    --shadow-1-1: #0a0a0a;
+    --shadow-1-1: #0c0c0c;
     --shadow-1-2: #191919;
     --outer-shadow: 3px 3px 3px var(--shadow-1-1), -3px -3px 3px var(--shadow-1-2);
     --outer-shadow-0: 0 0 0 var(--shadow-1-1), 0 0 0 var(--shadow-1-2);
