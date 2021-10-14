@@ -34,6 +34,14 @@
         box-sizing: border-box;
     }
     
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: var(--Gagalin);
+    }
+    
     hr {
         margin-top: 20px;
         border: 1px solid var(--color-prin);
@@ -502,10 +510,6 @@
         background-color: rgba(20, 20, 20, 0.5);
         backdrop-filter: blur(5px);
     }
-    
-    .opacityy .nav-menu.open {
-        transition: all 0.5s ease;
-    }
     /* END OPACITYY */
     /* NAVIGATION MENU */
     
@@ -519,6 +523,7 @@
         overflow-y: auto;
         box-shadow: 0 0 15px var(--color-ter);
         transform: translateX(100%);
+        transition: all 0.5s ease;
     }
     
     .nav-menu.open {
@@ -651,16 +656,19 @@
     
     .home-section .home-text p {
         color: var(--skin-color-2);
-        font-size: 18px;
+        font-size: 20px;
         text-transform: capitalize;
         margin: 0;
+        font-style: oblique;
+        font-weight: bolder;
     }
     
     .home-section .home-text h2 {
         color: var(--skin-color-3);
         font-size: 55px;
-        font-weight: 700;
+        font-weight: 700, bold;
         margin: 0;
+        font-style: oblique;
     }
     
     .home-section .home-text h1 {
@@ -669,6 +677,7 @@
         font-weight: 500;
         margin: 0;
         text-transform: capitalize;
+        font-style: italic;
     }
     
     .home-section .home-img .img-box {
@@ -1263,12 +1272,13 @@
     }
     
     .portfolio-popup .pp-title p {
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 600;
         color: var(--color-sec);
         margin: 0 0 15px;
         padding-bottom: 10px;
         border-bottom: 1px solid var(--color-prin);
+        font-family: var(--Gagalin);
     }
     
     .portfolio-popup .pp-title p span {
