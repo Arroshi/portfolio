@@ -132,7 +132,7 @@
         background-color: transparent;
         line-height: 1.5;
         cursor: pointer;
-        border-radius: 30px;
+        border-radius: 10px;
         transition: all 0.3s ease;
         display: inline-block;
         border: none;
@@ -143,7 +143,7 @@
     }
     
     .btn-style::after {
-        border-radius: 30px;
+        border-radius: 10px;
     }
     
     html::-webkit-scrollbar,
@@ -532,7 +532,7 @@
         display: block;
         font-size: 35px;
         line-height: 40px;
-        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+        border-radius: 15%;
         position: absolute;
         right: 15px;
         top: 20px;
@@ -572,7 +572,7 @@
         color: var(--color-prin);
         padding: 5px 30px;
         text-transform: capitalize;
-        border-radius: 30px;
+        border-radius: 10px;
         transition: all 0.3s ease;
     }
     
@@ -581,7 +581,7 @@
     }
     
     .nav-menu ul li a::after {
-        border-radius: 30px;
+        border-radius: 10px;
     }
     
     .nav-menu ul li a:hover:not(.active) {
@@ -676,13 +676,13 @@
         max-width: 75%;
         display: block;
         margin: auto;
-        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+        border-radius: 60px;
         padding: 15px;
     }
     
     .home-section .home-img .img-box img {
         width: 100%;
-        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+        border-radius: 50px;
         border: 10px solid transparent;
     }
     
@@ -789,7 +789,7 @@
         display: inline-block;
         margin: 0 5px 10px;
         padding: 5px 10px;
-        border-radius: 30px;
+        border-radius: 10px;
         cursor: pointer;
         transition: all 0.3s ease;
         font-size: 20px;
@@ -1097,7 +1097,7 @@
         display: inline-block;
         margin: 0 5px 10px;
         padding: 5px 10px;
-        border-radius: 30px;
+        border-radius: 10px;
         cursor: pointer;
         font-weight: 500;
         color: var(--color-prin);
@@ -1360,7 +1360,7 @@
     .portfolio-popup .pp-project-details-btn {
         position: absolute;
         left: 0;
-        border-radius: 30px;
+        border-radius: 10px;
         font-size: 16px;
         font-weight: 500;
         color: var(--color-prin);
@@ -1382,13 +1382,13 @@
     }
     
     .portfolio-popup .pp-project-details-btn::after {
-        border-radius: 30px;
+        border-radius: 10px;
     }
     
     .portfolio-popup .pp-close {
         position: absolute;
         right: 0;
-        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+        border-radius: 15%;
         text-align: center;
         line-height: 40px;
         font-size: 35px;
@@ -1401,7 +1401,7 @@
     }
     
     .portfolio-popup .pp-close::after {
-        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+        border-radius: 15%;
     }
     
     .portfolio-popup .pp-counter {
@@ -1606,18 +1606,18 @@
     .contact-section .input-group {
         margin: 0 0 25px;
         transition: all 0.3s ease;
-        border-radius: 30px;
+        border-radius: 10px;
     }
     
     .contact-section .input-group::after {
-        border-radius: 30px;
+        border-radius: 10px;
     }
     
     .contact-section .input-group .input-control {
         height: 45px;
         display: block;
         width: 100%;
-        border-radius: 30px;
+        border-radius: 10px;
         border: none;
         background-color: transparent;
         font-size: 16px;
