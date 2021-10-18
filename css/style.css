@@ -740,6 +740,12 @@
     
     .about-section .about-img .social-link a i {
         line-height: 40px;
+        transform: rotate(-10deg);
+    }
+    
+    .about-section .about-img .social-link a:nth-child(even) i,
+    .about-section .about-img .social-link a:nth-child(even) i::after {
+        transform: rotate(10deg);
     }
     
     .about-section .about-img .social-link a::after {
@@ -1016,7 +1022,7 @@
         font-size: 20px;
         font-weight: 600;
         color: var(--color-sec);
-        margin: 0 0 10px;
+        margin: 30px 0 10px;
         text-transform: capitalize;
     }
     
@@ -1027,51 +1033,19 @@
         line-height: 26px;
     }
     
-    .service-section .service-item-inner .icon {
-        width: 60px;
-        height: 60px;
-        text-align: center;
-        /* border-radius: 20px; */
-        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
-        transition: all 0.3s ease;
-        display: block;
-        margin: 0 auto 30px;
-        position: relative;
-    }
-    
-    .service-section .service-item-inner .icon::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        /* border-radius: 20px; */
-        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
-        transition: all 0.3s ease;
-    }
-    
-    .service-section .service-item-inner .icon:nth-child(even) {
-        border-radius: 20% 80% 20% 80% / 80% 20% 80% 20%;
-    }
-    
-    .service-section .service-item-inner:hover .icon {
-        box-shadow: var(--inner-shadow-0);
-    }
-    
-    .service-section .service-item-inner:hover .icon::after {
-        box-shadow: var(--outer-shadow);
-    }
-    
     .service-section .service-item-inner:hover .icon i {
         color: var(--color-sec);
+        box-shadow: var(--outer-shadow);
+        transition: all 0.3s ease;
     }
     
     .service-section .service-item-inner .icon i {
+        width: 60px;
+        height: 60px;
         font-size: 25px;
         line-height: 60px;
         transition: all 0.3s ease;
-        color: var(--color-prin);
+        border-radius: 10%;
     }
     /* END SERVICES */
     /* PORTFOLIO */
