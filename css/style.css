@@ -274,7 +274,7 @@
         height: 180px;
         width: 180px;
         border: 25px solid whitesmoke;
-        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+        border-radius: 15%;
         left: 50%;
         top: -120px;
         animation: topBounce 3s ease-in-out infinite;
@@ -325,7 +325,7 @@
         top: 30%;
         display: flex;
         justify-content: space-between;
-        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+        border-radius: 15%;
         overflow: hidden;
         animation: spin 10s linear infinite;
     }
@@ -420,7 +420,7 @@
         border: 2px solid var(--color-prin);
         font-family: var(--Gagalin);
         text-transform: uppercase;
-        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+        border-radius: 15%;
     }
     
     .header .hamburger_btn {
@@ -549,7 +549,7 @@
     }
     
     .nav-menu .close-nav-menu::after {
-        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+        border-radius: 15%;
     }
     
     .nav-menu ul {
@@ -730,7 +730,7 @@
         line-height: 40px;
         color: var(--color-prin);
         margin: 0 17px;
-        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+        border-radius: 15%;
         transition: all 0.3s ease;
     }
     
@@ -750,7 +750,7 @@
     }
     
     .about-section .about-img .social-link a::after {
-        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+        border-radius: 15%;
     }
     
     .about-section .about-img .social-link a:hover {
@@ -805,7 +805,7 @@
     }
     
     .about-section .about-tabs .tab-item::after {
-        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+        border-radius: 15%;
     }
     
     .about-section .about-tabs .tab-item:hover:not(.active) {
@@ -1533,12 +1533,12 @@
         font-size: 20px;
         cursor: pointer;
         transition: all 0.3s ease;
-        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+        border-radius: 15%;
         margin: 0 4px;
     }
     
     .testimonial-section .testimonial-slider-nav span::after {
-        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+        border-radius: 15%;
     }
     
     .testimonial-section .testimonial-slider-nav span i {
