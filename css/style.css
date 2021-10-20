@@ -734,13 +734,23 @@
         transition: all 0.3s ease;
     }
     
+    .about-section .about-img .social-link a:nth-child(odd),
+    .about-section .about-img .social-link a:nth-child(odd)::after {
+        border-radius: 80% 20% 80% 20% / 20% 80% 20% 80%;
+    }
+    
     .about-section .about-img .social-link a:nth-child(even),
     .about-section .about-img .social-link a:nth-child(even)::after {
         border-radius: 20% 80% 20% 80% / 80% 20% 80% 20%;
     }
     
+    .about-section .about-img .social-link a,
     .about-section .about-img .social-link a i {
         line-height: 40px;
+    }
+    
+    .about-section .about-img .social-link a:nth-child(odd) i,
+    .about-section .about-img .social-link a:nth-child(odd) i::after {
         transform: rotate(-10deg);
     }
     
