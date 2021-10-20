@@ -57,9 +57,6 @@
     .portfolio-popup .pp-main-inner {
         width: 100%;
     }
-}
-
-@media (max-width: 720px) {
     .nav-menu.open {
         width: 50%;
     }
