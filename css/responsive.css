@@ -60,6 +60,10 @@
     .nav-menu.open {
         width: 50%;
     }
+    .contact-section .contact-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 640px) {
