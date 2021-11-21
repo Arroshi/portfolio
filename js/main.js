@@ -132,7 +132,7 @@ function bodyShowScroll() {
         projectDetailsContainer = popup.querySelector(".pp-details"),
         projectDetailsBtn = popup.querySelector(".pp-project-details-btn");
 
-    let itemIndex, slideIndex, screenshots;
+    let itemIndex, slideIndex, screenshots, filter;
 
     // FILTER PORTFOLIO ITEMS
     filterContainer.addEventListener("click", (event) => {
@@ -142,6 +142,9 @@ function bodyShowScroll() {
             // activamos un nuevo "filter-item"
             event.target.classList.add("active", "outer-shadow");
             const target = event.target.getAttribute("data-target");
+
+
+
             portfolioItems.forEach((item) => {
                 if (target === item.getAttribute("data-category") || target === "all") {
                     item.classList.remove("hide");
@@ -157,11 +160,13 @@ function bodyShowScroll() {
     portfolioItemsContainer.addEventListener("click", (event) => {
         if (event.target.closest(".portfolio-item-inner")) {
             const portfolioItem = event.target.closest(".portfolio-item-inner").parentElement;
+
             // obtener el "portfolioItem"
             itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(portfolioItem);
+
             screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img img").getAttribute("data-screenshots");
             // convertir "screenshots" a array
-            screenshots = screenshots.split(",");
+            screenshots = screenshots.split(", ");
             if (screenshots.length === 1) {
                 nextBtn.style.display = "none";
                 prevBtn.style.display = "none";
@@ -273,49 +278,49 @@ function bodyShowScroll() {
 
 // TESTIMONIAL
 
-(() => {
-    const sliderContainer = document.querySelector(".testimonial-slider-container"),
-        slides = sliderContainer.querySelectorAll(".testimonial-item"),
-        slideWidth = sliderContainer.offsetWidth,
-        prevBtn = document.querySelector(".testimonial-slider-nav .prev"),
-        nextBtn = document.querySelector(".testimonial-slider-nav .next"),
-        activeSlide = sliderContainer.querySelector(".testimonial-item.active");
-    let slideIndex = Array.from(activeSlide.parentElement.children).indexOf(activeSlide);
+// (() => {
+//     const sliderContainer = document.querySelector(".testimonial-slider-container"),
+//         slides = sliderContainer.querySelectorAll(".testimonial-item"),
+//         slideWidth = sliderContainer.offsetWidth,
+//         prevBtn = document.querySelector(".testimonial-slider-nav .prev"),
+//         nextBtn = document.querySelector(".testimonial-slider-nav .next"),
+//         activeSlide = sliderContainer.querySelector(".testimonial-item.active");
+//     let slideIndex = Array.from(activeSlide.parentElement.children).indexOf(activeSlide);
 
-    // obtener tamaño de slide
-    slides.forEach((slide) => {
-            slide.style.width = slideWidth + "px";
-        })
-        // obtener tamaño de sliderContainer
-    sliderContainer.style.width = slideWidth * slides.length + "px";
+//     // obtener tamaño de slide
+//     slides.forEach((slide) => {
+//             slide.style.width = slideWidth + "px";
+//         })
+//         // obtener tamaño de sliderContainer
+//     sliderContainer.style.width = slideWidth * slides.length + "px";
 
-    nextBtn.addEventListener("click", () => {
-        if (slideIndex === slides.length - 1) {
-            slideIndex = 0;
-        } else {
-            slideIndex++;
-        }
-        slider();
-    })
+//     nextBtn.addEventListener("click", () => {
+//         if (slideIndex === slides.length - 1) {
+//             slideIndex = 0;
+//         } else {
+//             slideIndex++;
+//         }
+//         slider();
+//     })
 
-    prevBtn.addEventListener("click", () => {
-        if (slideIndex === 0) {
-            slideIndex = slides.length - 1;
-        } else {
-            slideIndex--;
-        }
-        slider();
-    })
+//     prevBtn.addEventListener("click", () => {
+//         if (slideIndex === 0) {
+//             slideIndex = slides.length - 1;
+//         } else {
+//             slideIndex--;
+//         }
+//         slider();
+//     })
 
-    function slider() {
-        // desacticar el active
-        sliderContainer.querySelector(".testimonial-item.active").classList.remove("active");
-        // activar el active
-        slides[slideIndex].classList.add("active");
-        sliderContainer.style.marginLeft = -(slideWidth * slideIndex) + "px";
-    }
-    slider();
-})();
+//     function slider() {
+//         // desacticar el active
+//         sliderContainer.querySelector(".testimonial-item.active").classList.remove("active");
+//         // activar el active
+//         slides[slideIndex].classList.add("active");
+//         sliderContainer.style.marginLeft = -(slideWidth * slideIndex) + "px";
+//     }
+//     slider();
+// })();
 // END TESTIMONIAL
 
 
