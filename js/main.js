@@ -194,9 +194,9 @@ function bodyShowScroll() {
 
     function popupSlideShow() {
         const imgSrc = screenshots[slideIndex];
-        congole.log(imgSrc);
+        console.log(imgSrc);
         const popupImg = popup.querySelector(".pp-img");
-        congole.log(popupImg);
+        console.log(popupImg);
         popup.querySelector(".pp-loader").classList.add("active");
         popupImg.src = imgSrc;
         popupImg.onload = () => {
