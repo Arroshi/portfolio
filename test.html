@@ -23,31 +23,55 @@
                         <h5>Lorem</h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
+                    <div class="swiper-buttom">
+                        <button type="button">Contáctanos</button>
+                    </div>
                 </div>
             </div>
 
             <div class="swiper-slide">
-                <div class="swiper-txt">
-                    <h3>Lorem ipsum</h3>
-                    <p>descripcion</p>
+                <div class="swiper-content">
+                    <div class="swiper-img">
+                        <img src="images/Glowing-2.png" alt="">
+                    </div>
+                    <div class="swiper-txt">
+                        <h5>Lorem</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="swiper-buttom">
+                        <button type="button">Contáctanos</button>
+                    </div>
                 </div>
-                <img src="images/Glowing-2.png" alt="">
             </div>
 
             <div class="swiper-slide">
-                <div class="swiper-txt">
-                    <h3>Lorem ipsum</h3>
-                    <p>descripcion</p>
+                <div class="swiper-content">
+                    <div class="swiper-img">
+                        <img src="images/Glowing-3.png" alt="">
+                    </div>
+                    <div class="swiper-txt">
+                        <h5>Lorem</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="swiper-buttom">
+                        <button type="button">Contáctanos</button>
+                    </div>
                 </div>
-                <img src="images/Glowing-3.png" alt="">
             </div>
 
             <div class="swiper-slide">
-                <div class="swiper-txt">
-                    <h3>Lorem ipsum</h3>
-                    <p>descripcion</p>
+                <div class="swiper-content">
+                    <div class="swiper-img">
+                        <img src="images/Glowing-4.png" alt="">
+                    </div>
+                    <div class="swiper-txt">
+                        <h5>Lorem</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="swiper-buttom">
+                        <button type="button">Contáctanos</button>
+                    </div>
                 </div>
-                <img src="images/Glowing-4.png" alt="">
             </div>
         </div>
 
@@ -84,13 +108,18 @@
             margin-top: 40px;
         }
 
-        /* .swiper-slide:not(.swiper-slide-next) {
-            flex: 0 0 25%;
+        .swiper-slide:not(.swiper-slide-next) {
+            transform: scale(0.75);
         }
 
         .swiper-slide-next {
-            flex: 0 0 50%;
-        } */
+            transform: scale(1.2) !important;
+            /* flex: 0 0 50%; */
+        }
+
+        .swiper-slide.swiper-slide-next .swiper-content {
+            width: 100%;
+        }
 
         .swiper-slide {
             display: flex;
@@ -119,18 +148,38 @@
         .swiper-slide img {
             width: 100%;
             border-radius: 15px;
-            height: 420px;
+            height: 100%;
         }
 
         .swiper-content {
-            width: 50%;
+            width: 75%;
             padding: 15px;
+            border: 1px solid;
         }
 
-        .swiper-txt {
+        .swiper-content .swiper-img {
+            height: 200px;
+        }
+
+        .swiper-content .swiper-img img {
+            height: 100%;
+        }
+
+        .swiper-txt h5 {
+            margin-top: 10px;
+            font-size: 20px;
             /* position: absolute;
             padding: 25px;
             margin-bottom: 5px; */
+        }
+
+        .swiper-txt p {
+            margin-top: 10px;
+        }
+
+        .swiper-buttom button {
+            margin-top: 20px;
+            float: right;
         }
     </style>
 
