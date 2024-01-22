@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <div class="swiper mySwiper container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="swiper-content">
+                    <div class="swiper-img">
+                        <img src="images/Glowing-1.png" alt="">
+                    </div>
+                    <div class="swiper-txt">
+                        <h5>Lorem</h5>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="swiper-txt">
+                    <h3>Lorem ipsum</h3>
+                    <p>descripcion</p>
+                </div>
+                <img src="images/Glowing-2.png" alt="">
+            </div>
+
+            <div class="swiper-slide">
+                <div class="swiper-txt">
+                    <h3>Lorem ipsum</h3>
+                    <p>descripcion</p>
+                </div>
+                <img src="images/Glowing-3.png" alt="">
+            </div>
+
+            <div class="swiper-slide">
+                <div class="swiper-txt">
+                    <h3>Lorem ipsum</h3>
+                    <p>descripcion</p>
+                </div>
+                <img src="images/Glowing-4.png" alt="">
+            </div>
+        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        body {
+            background: linear-gradient(180deg,
+                    rgba(204, 204, 204, 1) 0%,
+                    rgba(238, 238, 238, 1) 50%,
+                    rgba(204, 204, 204, 1) 100%,
+                );
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .swiper {
+            margin-top: 40px;
+        }
+
+        /* .swiper-slide:not(.swiper-slide-next) {
+            flex: 0 0 25%;
+        }
+
+        .swiper-slide-next {
+            flex: 0 0 50%;
+        } */
+
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 50px;
+            background-color: #ffffff;
+            /* box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2); */
+            border-radius: 15px;
+            height: 420px;
+            width: 100%;
+            position: relative;
+        }
+
+        .swiper-slide:not(.swiper-slide-next) img {
+            opacity: 0.7;
+            /* width: 245px; */
+            height: 300px;
+        }
+
+        .swiper-slide-next img {
+            opacity: 1;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            border-radius: 15px;
+            height: 420px;
+        }
+
+        .swiper-content {
+            width: 50%;
+            padding: 15px;
+        }
+
+        .swiper-txt {
+            /* position: absolute;
+            padding: 25px;
+            margin-bottom: 5px; */
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                // spaceBetween: 60,
+                grabCursor: true,
+                loop: true,
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            })
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script>
+</body>
+
+</html>
