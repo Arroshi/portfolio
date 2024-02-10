@@ -13,6 +13,7 @@ body {
   /* line-height: 1.5; */
   /* overflow-x: hidden; */
   /* background-color: var(--color-theme); */
+
   color: var(--color-prin);
   background-image: url("../images/BlackPaper_.jpg");
   background-position: center;
@@ -166,6 +167,7 @@ img {
 html::-webkit-scrollbar,
 .portfolio-popup::-webkit-scrollbar {
   width: 7px;
+  background-color: #1a1a1a;
 }
 
 html::-webkit-scrollbar-thumb,
