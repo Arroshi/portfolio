@@ -7,9 +7,11 @@
     <title>Document</title>
 
     <link href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css" rel="stylesheet">
+
 </head>
 
 <body>
+
 
 
     <div class="swiper mySwiper container">
@@ -17,14 +19,7 @@
             <div class="swiper-slide">
                 <div class="swiper-content">
                     <div class="swiper-img">
-                        <img src="images/Glowing-1.png" alt="">
-                    </div>
-                    <div class="swiper-txt">
-                        <h5>Lorem</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                    <div class="swiper-buttom">
-                        <button type="button">Contáctanos</button>
+                        <img src="https://mak.com.pe/wp-content/uploads/2024/02/Etapa-1.png" alt="">
                     </div>
                 </div>
             </div>
@@ -32,14 +27,7 @@
             <div class="swiper-slide">
                 <div class="swiper-content">
                     <div class="swiper-img">
-                        <img src="images/Glowing-2.png" alt="">
-                    </div>
-                    <div class="swiper-txt">
-                        <h5>Lorem</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                    <div class="swiper-buttom">
-                        <button type="button">Contáctanos</button>
+                        <img src="https://mak.com.pe/wp-content/uploads/2024/02/Etapa-2.png" alt="">
                     </div>
                 </div>
             </div>
@@ -47,14 +35,7 @@
             <div class="swiper-slide">
                 <div class="swiper-content">
                     <div class="swiper-img">
-                        <img src="images/Glowing-3.png" alt="">
-                    </div>
-                    <div class="swiper-txt">
-                        <h5>Lorem</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                    <div class="swiper-buttom">
-                        <button type="button">Contáctanos</button>
+                        <img src="https://mak.com.pe/wp-content/uploads/2024/02/Etapa-3.png" alt="">
                     </div>
                 </div>
             </div>
@@ -62,14 +43,7 @@
             <div class="swiper-slide">
                 <div class="swiper-content">
                     <div class="swiper-img">
-                        <img src="images/Glowing-4.png" alt="">
-                    </div>
-                    <div class="swiper-txt">
-                        <h5>Lorem</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                    <div class="swiper-buttom">
-                        <button type="button">Contáctanos</button>
+                        <img src="https://mak.com.pe/wp-content/uploads/2024/02/Etapa-1.png" alt="">
                     </div>
                 </div>
             </div>
@@ -83,20 +57,10 @@
         <div class="swiper-button-next"></div>
     </div>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            text-decoration: none;
-            list-style: none;
-        }
 
-        body {
-            background: linear-gradient(180deg,
-                    rgba(204, 204, 204, 1) 0%,
-                    rgba(238, 238, 238, 1) 50%,
-                    rgba(204, 204, 204, 1) 100%,
-                );
+    <style>
+        .swiper-wrapper {
+            margin: 52px 0;
         }
 
         .container {
@@ -105,7 +69,12 @@
         }
 
         .swiper {
-            margin-top: 40px;
+            margin-top: -35px !important;
+        }
+
+        .swiper-slide-next .swiper-content .swiper-img {
+            width: 100%;
+            height: 100%;
         }
 
         .swiper-slide:not(.swiper-slide-next) {
@@ -114,7 +83,6 @@
 
         .swiper-slide-next {
             transform: scale(1.2) !important;
-            /* flex: 0 0 50%; */
         }
 
         .swiper-slide.swiper-slide-next .swiper-content {
@@ -125,76 +93,66 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
-            margin-bottom: 50px;
-            background-color: #ffffff;
-            /* box-shadow: 0 30px 30px rgba(0, 0, 0, 0.2); */
-            /* border-radius: 15px; */
-            height: 420px;
+            background-color: transparent !important;
+            margin-bottom: 30px !important;
+            /* height: 420px; */
             width: 100%;
             position: relative;
-        }
-
-        .swiper-slide:not(.swiper-slide-next) img {
-            opacity: 0.7;
-            /* width: 245px; */
-            height: 300px;
-        }
-
-        .swiper-slide-next img {
-            opacity: 1;
+            color: #1D3058;
         }
 
         .swiper-slide img {
             width: 100%;
-            /* border-radius: 15px; */
             height: 100%;
         }
 
-        .swiper-content {
-            width: 75%;
-            padding: 15px;
-            border: 1px solid;
-        }
-
         .swiper-content .swiper-img {
+            width: 320px;
             height: 200px;
             overflow: hidden;
         }
 
-        .swiper-content .swiper-img img {
-            height: 100%;
-            transition: transform 1s;
+        .swiper-pagination-bullet {
+            width: 11px !important;
+            height: 11px !important;
+            color: #D9D9D980 !important;
         }
 
-        .swiper-content .swiper-img img:hover {
-            transform: scale(1.3);
+        .swiper-pagination-bullet-active {
+            background-color: #1D3058 !important;
         }
 
-        .swiper-txt h5 {
-            margin-top: 10px;
-            font-size: 20px;
-            /* position: absolute;
-            padding: 25px;
-            margin-bottom: 5px; */
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: inherit !important;
+            bottom: -1.5%;
         }
 
-        .swiper-txt p {
-            margin-top: 10px;
+        .swiper-button-prev,
+        .swiper-container-rtl .swiper-button-next {
+            background-image: url("https://mak.com.pe/wp-content/uploads/2024/01/arrow_left.png");
+            left: 40% !important;
         }
 
-        .swiper-buttom button {
-            margin-top: 20px;
-            float: right;
+        .swiper-button-next,
+        .swiper-container-rtl .swiper-button-next {
+            background-image: url("https://mak.com.pe/wp-content/uploads/2024/01/arrow_right.png");
+            right: 40% !important;
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-size: 0 !important;
         }
     </style>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var swiper = new Swiper(".mySwiper", {
                 slidesPerView: 3,
                 // spaceBetween: 60,
-                grabCursor: true,
+                //grabCursor: true,
                 loop: true,
                 // If we need pagination
                 pagination: {
@@ -211,6 +169,7 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script>
+
 </body>
 
-</html>
+</html> -->

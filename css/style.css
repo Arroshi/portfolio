@@ -9,11 +9,15 @@
 }
 
 body {
-  font-size: 16px;
-  line-height: 1.5;
-  overflow-x: hidden;
-  background-color: var(--color-theme);
+  /* font-size: 16px; */
+  /* line-height: 1.5; */
+  /* overflow-x: hidden; */
+  /* background-color: var(--color-theme); */
   color: var(--color-prin);
+  background-image: url("../images/BlackPaper_.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 body.hidden-scrolling {
@@ -67,7 +71,7 @@ img {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1230px;
   margin: auto;
 }
 
@@ -77,15 +81,27 @@ img {
   width: 100%;
 }
 
-.space {
-  padding: 20px 0;
+.d-flex {
+  display: flex !important;
+}
+
+.f-50 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 15px;
+}
+
+.f-100 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 0 15px;
 }
 
 .align-center {
   text-align: center;
 }
 
-.justify_content_between {
+.justify-between {
   justify-content: space-between;
 }
 
@@ -649,11 +665,12 @@ h2:before {
   min-height: 100vh;
 }
 
+.home-section .d-flex.glass {
+  padding: 7rem 5rem !important;
+}
+
 .home-section .home-text,
 .home-section .home-img {
-  flex: 0 0 50%;
-  max-width: 50%;
-  padding: 0 15px;
 }
 
 .home-section .home-text p {
@@ -684,7 +701,7 @@ h2:before {
 }
 
 .home-section .home-img .img-box {
-  max-width: 75%;
+  max-width: 100%;
   display: block;
   margin: auto;
   border-radius: 60px;
@@ -693,8 +710,7 @@ h2:before {
 
 .home-section .home-img .img-box img {
   width: 100%;
-  border-radius: 50px;
-  border: 10px solid transparent;
+  border-radius: 20px;
 }
 
 .home-section .home-text .btn-style {
@@ -1679,3 +1695,9 @@ h2:before {
 }
 
 /* END CONTACT */
+.glass {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 15px !important;
+  border-radius: 20px !important;
+}
