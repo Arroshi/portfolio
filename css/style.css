@@ -8,7 +8,7 @@
   font-family: var(--Blogger);
 }
 
-body {
+.bg-contnt {
   /* font-size: 16px; */
   /* line-height: 1.5; */
   /* overflow-x: hidden; */
@@ -21,11 +21,15 @@ body {
   background-size: cover;
 }
 
-body.hidden-scrolling {
+.bg-contnt.hidden-scrolling {
   overflow-y: hidden;
   /* transition: all 1s ease; */
 }
-
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
 .hide-scroll {
   overflow-y: hidden;
 }
@@ -98,8 +102,17 @@ img {
   padding: 0 15px;
 }
 
+.pdd.glass-bg,
+.pdd.glass-ug {
+  padding: 60px 30px;
+}
+
 .align-center {
   text-align: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
@@ -203,6 +216,7 @@ html::-webkit-scrollbar-thumb:hover,
   margin: 0;
 }
 
+h1:before,
 h2:before {
   content: attr(data-heading);
   display: block;
@@ -475,7 +489,8 @@ h2:before {
   height: 2px;
   width: 16px;
   position: relative;
-  background-color: var(--color-prin);
+  /* background-color: var(--color-prin); */
+  background-color: var(--color-sec);
 }
 
 .header .hamburger_btn span::before,
@@ -484,8 +499,12 @@ h2:before {
   position: absolute;
   left: 0;
   width: 100%;
+  width: 16px;
+  height: 2px;
+
   height: 100%;
-  background-color: var(--color-prin);
+  /* background-color: var(--color-prin); */
+  background-color: var(--color-sec);
 }
 
 .header .hamburger_btn span::before {
@@ -668,7 +687,7 @@ h2:before {
 }
 
 .home-section .d-flex.glass {
-  padding: 7rem 5rem !important;
+  /* padding: 7rem 5rem !important; */
 }
 
 .home-section .home-text,
@@ -683,15 +702,14 @@ h2:before {
   font-style: oblique;
 }
 
-.home-section .home-text h2 {
+.home-section .home-text .title h1 {
   color: var(--skin-color-3);
   font-size: 55px;
   font-weight: 700;
   margin: 0;
   font-style: oblique;
 }
-
-.home-section .home-text h1 {
+.home-section .home-text .title h3 {
   color: var(--color-prin);
   font-size: 20px;
   font-weight: 500;
@@ -700,14 +718,24 @@ h2:before {
   font-style: italic;
   font-family: var(--Blogger);
   font-weight: bolder;
+  margin-top: 20px;
+}
+
+.home-section .home-text .sub-title h3 {
+  color: var(--color-prin);
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  text-transform: capitalize;
+  font-style: italic;
+  font-family: var(--Blogger);
+  font-weight: bolder;
+  margin-top: 10px;
 }
 
 .home-section .home-img .img-box {
-  max-width: 100%;
-  display: block;
+  max-width: 80%;
   margin: auto;
-  border-radius: 60px;
-  padding: 15px;
 }
 
 .home-section .home-img .img-box img {
@@ -1697,9 +1725,11 @@ h2:before {
 }
 
 /* END CONTACT */
-.glass {
-  background-color: rgba(255, 255, 255, 0.2);
+.glass-bg,
+.glass-ug {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(10px);
-  padding: 15px !important;
-  border-radius: 20px !important;
+  border-radius: 20px;
+  padding: 20px;
 }
