@@ -8,6 +8,11 @@
   font-family: var(--Blogger);
 }
 
+.bg {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
 .bg-contnt {
   /* font-size: 16px; */
   /* line-height: 1.5; */
@@ -105,6 +110,10 @@ img {
 .pdd.glass-bg,
 .pdd.glass-ug {
   padding: 60px 30px;
+}
+
+.pd-0 {
+  padding: 0 !important;
 }
 
 .align-center {
@@ -469,6 +478,7 @@ h2:before {
   cursor: pointer;
   border-radius: 15%;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .header .hamburger_btn::after {
@@ -598,7 +608,12 @@ h2:before {
 }
 
 .nav-menu ul {
+  width: 400px;
+  height: 500px;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .nav-menu ul li {
