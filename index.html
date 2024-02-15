@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <title>Portafolio</title>
 
@@ -47,21 +48,23 @@
     <div class="opacityy"></div>
     <nav class="nav-menu bg-contnt">
 
-        <div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
+        <div class="close-nav-menu glass-bg pd-0">
+            <b class="glass-ug">&times;</b>
+        </div>
         <div class="nav-menu-inner">
 
             <!-- COPYRIGHT -->
             <p class="copyright-text">&copy; 2021 My Portafolio.</p>
             <!-- END COPYRIGHT -->
-            <ul class="">
-                <li><a href="#home" class="link-item inner-shadow active">Home</a></li>
-                <li><a href="#about" class="link-item outer-shadow hover-in-shadow">About</a></li>
-                <li><a href="#services" class="link-item outer-shadow hover-in-shadow">Services</a></li>
-                <li><a href="#portfolio" class="link-item outer-shadow hover-in-shadow">Portfolio</a></li>
-                <!-- <li><a href="#testimonial" class="link-item outer-shadow hover-in-shadow">Testimonial</a></li> -->
-                <li><a href="#contact" class="link-item outer-shadow hover-in-shadow">Contact</a></li>
+            <ul class="glass-bg">
+                <li><a href="#home" class="link-item glass-ug active">Home</a></li>
+                <li><a href="#about" class="link-item">About</a></li>
+                <li><a href="#services" class="link-item">Services</a></li>
+                <li><a href="#portfolio" class="link-item">Portfolio</a></li>
+                <!-- <li><a href="#testimonial" class="link-item">Testimonial</a></li> -->
+                <li><a href="#contact" class="link-item">Contact</a></li>
             </ul>
-            <div class="day-night s-icon outer-shadow hover-in-shadow">
+            <div class="day-night s-icon">
                 <i class="fas"></i>
             </div>
         </div>
@@ -72,55 +75,6 @@
 
     <!-- HOME SECTION -->
     <section class="home-section section active" id="home">
-        <!-- EFFECT WRAP -->
-        <!-- <div class="effect-wrap">
-            <div class="effect effect-1"></div>
-            <div class="effect effect-2">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="effect effect-3"></div>
-            <div class="effect effect-4"></div>
-            <div class="effect effect-5">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div> -->
-        <!-- END EFFECT WRAP -->
         <div class="container">
             <div class="row full-screen align-item-center">
                 <div class="d-flex pdd glass-bg ">
@@ -161,7 +115,7 @@
     <!-- END HOME SECTION -->
 
     <!-- ABOUT SECTION -->
-    <section class="about-section section hidden-scrolling" id="about">
+    <section class="about-section section" id="about">
         <div class="container">
             <div class="row">
                 <div class="section-title">
@@ -169,15 +123,15 @@
                 </div>
             </div>
             <div class="row">
-                <div class="about-info">
-                    <div>
-                        <p class="glass-bg"><span>Hola! Mi nombre es Victor, y soy programador! 👽👨‍💻</span></p>
-                        <p class="glass-bg">Soy un programador autodidacta, responsable y orientado a resultados, con la
+                <div class="about-info glass-bg">
+                    <div class="">
+                        <p class="glass-ug"><span>Hola! Mi nombre es Victor, y soy programador! 👽👨‍💻</span></p>
+                        <p class="glass-ug">Soy un programador autodidacta, responsable y orientado a resultados, con la
                             experiencia necesaria para aportar soluciones sólidas y creativas a cualquier proyecto de
                             desarrollo</p>
                     </div>
                     <div class="align-center">
-                        <a href="cv.pdf" class="btn-style outer-shadow hover-in-shadow" target="_blank">Curriculum
+                        <a href="cv.pdf" class="btn-style glass-ug" target="_blank">Curriculum
                             Vitae</a>
                         <!-- <a href="#contact" class="link-item btn-style outer-shadow hover-in-shadow">Hire Me</a> -->
                     </div>
@@ -201,23 +155,23 @@
                 </div>
             </div>
             <!-- TABS  -->
-            <div class="row">
-                <div class="about-tabs">
-                    <span class="tab-item outer-shadow inner-shadow active" data-target=".skills">Habilidades</span>
-                    <span class="tab-item inner-shadow" data-target=".experience">Experiencia</span>
-                    <span class="tab-item inner-shadow" data-target=".education">Educación</span>
+            <div class="row about-tabs">
+                <div class="tab-items glass-bg">
+                    <span class="tab-item glass-bg active" data-target=".skills">Habilidades</span>
+                    <span class="tab-item glass-bg" data-target=" .experience">Experiencia</span>
+                    <span class="tab-item glass-bg" data-target=" .education">Educación</span>
                 </div>
             </div>
             <!-- END TABS -->
 
             <!-- SKILLS -->
             <div class="row">
-                <div class="skills tab-content active">
-                    <div class="row">
+                <div class="skills tab-content glass-bg active">
+                    <div class="row justify-around">
                         <!-- ITEM 1 -->
-                        <div class="skill-item">
+                        <div class="skill-item glass-bg">
                             <p><i class="fab fa-html5"></i> Html</p>
-                            <div class="progress inner-shadow">
+                            <div class="progress glass-ug">
                                 <div class="progress-bar" style="width: calc(60% - 14px)">
                                     <span>60%</span>
                                 </div>
@@ -225,9 +179,9 @@
                         </div>
                         <!-- END ITEM 1 -->
                         <!-- ITEM 2 -->
-                        <div class="skill-item">
+                        <div class="skill-item glass-bg">
                             <p><i class="fas fa-database"></i> Oracle</p>
-                            <div class="progress inner-shadow">
+                            <div class="progress glass-ug">
                                 <div class="progress-bar" style="width: calc(60% - 14px)">
                                     <span>60%</span>
                                 </div>
@@ -235,19 +189,19 @@
                         </div>
                         <!-- END ITEM 2 -->
                         <!-- ITEM 3 -->
-                        <div class="skill-item">
+                        <div class="skill-item glass-bg">
                             <p><i class="fab fa-php"></i> PHP</p>
-                            <div class="progress inner-shadow">
-                                <div class="progress-bar" style="width: calc(50% - 14px)">
-                                    <span>50%</span>
+                            <div class="progress glass-ug">
+                                <div class="progress-bar" style="width: calc(89% - 14px)">
+                                    <span>89%</span>
                                 </div>
                             </div>
                         </div>
                         <!-- END ITEM 3 -->
                         <!-- ITEM 4 -->
-                        <div class="skill-item">
+                        <div class="skill-item glass-bg">
                             <p><i class="fab fa-android"></i> Android</p>
-                            <div class="progress inner-shadow">
+                            <div class="progress glass-ug">
                                 <div class="progress-bar" style="width: calc(50% - 14px)">
                                     <span>50%</span>
                                 </div>
@@ -255,9 +209,9 @@
                         </div>
                         <!-- END ITEM 4 -->
                         <!-- ITEM 5 -->
-                        <div class="skill-item">
+                        <div class="skill-item glass-bg">
                             <p><i class="fab fa-js-square"></i> JavaScript</p>
-                            <div class="progress inner-shadow">
+                            <div class="progress glass-ug">
                                 <div class="progress-bar" style="width: calc(60% - 14px)">
                                     <span>60%</span>
                                 </div>
@@ -265,15 +219,25 @@
                         </div>
                         <!-- END ITEM 5 -->
                         <!-- ITEM 6 -->
-                        <div class="skill-item">
-                            <p><i class="fab fa-js-square"></i> WordPress</p>
-                            <div class="progress inner-shadow">
+                        <div class="skill-item glass-bg">
+                            <p><i class="bi bi-wordpress"></i> WordPress</p>
+                            <div class="progress glass-ug">
                                 <div class="progress-bar" style="width: calc(55% - 14px)">
                                     <span>55%</span>
                                 </div>
                             </div>
                         </div>
                         <!-- END ITEM 6 -->
+                        <!-- ITEM 7 -->
+                        <div class="skill-item glass-bg">
+                            <p><i class="fab fa-js-square"></i> WordPress</p>
+                            <div class="progress glass-ug">
+                                <div class="progress-bar" style="width: calc(55% - 14px)">
+                                    <span>55%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END ITEM 7 -->
                     </div>
                 </div>
                 <!-- END SKILLS -->
@@ -281,7 +245,7 @@
                 <div class="row">
                     <div class="experience tab-content">
                         <div class="row">
-                            <div class="timeline">
+                            <div class="timeline glass-bg">
                                 <div class="row">
                                     <!-- TIMELINE ITEM -->
                                     <div class="timeline-item">
@@ -376,42 +340,75 @@
     <section class="service-section section" id="services">
         <div class="container">
             <div class="row">
-                <div class="section-title">
-                    <h2 data-heading="Services">What i do</h2>
-                </div>
-            </div>
-            <div class="row">
-                <!-- SERVICE ITEM -->
-                <div class="service-item">
-                    <div class="service-item-inner outer-shadow">
-                        <div class="icon inner-shadow">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3>Responsive Design</h3>
-                        <p>Your site will display properly on any device, including desktop computers, tablets and
-                            mobile phones.</p>
+                <div class="row">
+                    <div class="section-title">
+                        <h2 data-heading="Services">What i do</h2>
                     </div>
                 </div>
-                <div class="service-item">
-                    <div class="service-item-inner outer-shadow">
-                        <div class="icon inner-shadow">
-                            <i class="fas fa-laptop-code"></i>
+                <div class="row">
+                    <!-- SERVICE ITEM -->
+                    <div class="service-item glass-bg">
+                        <div class="service-item-inner outer-shadow">
+                            <div class="icon inner-shadow">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3>Responsive Design</h3>
+                            <p>Your site will display properly on any device, including desktop computers, tablets and
+                                mobile phones.</p>
                         </div>
-                        <h3>Web Design</h3>
-                        <p>create websites with the characteristics and requirements necessary to represent a business,
-                            company or activity on the Internet.</p>
                     </div>
-                </div>
-                <div class="service-item">
-                    <div class="service-item-inner outer-shadow">
-                        <div class="icon inner-shadow">
-                            <i class="fas fa-code"></i>
+                    <div class="service-item glass-bg">
+                        <div class="service-item-inner outer-shadow">
+                            <div class="icon inner-shadow">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>Web Design</h3>
+                            <p>create websites with the characteristics and requirements necessary to represent a
+                                business,
+                                company or activity on the Internet.</p>
                         </div>
-                        <h3>Development</h3>
-                        <p>I know the importance of web design and can help you create a website you’ll love.</p>
                     </div>
+                    <div class="service-item glass-bg">
+                        <div class="service-item-inner outer-shadow">
+                            <div class="icon inner-shadow">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Development</h3>
+                            <p>I know the importance of web design and can help you create a website you’ll love.</p>
+                        </div>
+                    </div>
+                    <div class="service-item glass-bg">
+                        <div class="service-item-inner outer-shadow">
+                            <div class="icon inner-shadow">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3>Responsive Design</h3>
+                            <p>Your site will display properly on any device, including desktop computers, tablets and
+                                mobile phones.</p>
+                        </div>
+                    </div>
+                    <div class="service-item glass-bg">
+                        <div class="service-item-inner outer-shadow">
+                            <div class="icon inner-shadow">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>Web Design</h3>
+                            <p>create websites with the characteristics and requirements necessary to represent a
+                                business,
+                                company or activity on the Internet.</p>
+                        </div>
+                    </div>
+                    <div class="service-item glass-bg">
+                        <div class="service-item-inner outer-shadow">
+                            <div class="icon inner-shadow">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Development</h3>
+                            <p>I know the importance of web design and can help you create a website you’ll love.</p>
+                        </div>
+                    </div>
+                    <!-- END SERVICE ITEM -->
                 </div>
-                <!-- END SERVICE ITEM -->
             </div>
         </div>
     </section>

@@ -55,22 +55,22 @@
         // desactivar el active en el nav
         navMenu
           .querySelector(".active")
-          .classList.add("outer-shadow", "hover-in-shadow");
-        navMenu
-          .querySelector(".active")
-          .classList.remove("active", "inner-shadow");
+          //   .classList.add("outer-shadow", "hover-in-shadow");
+          .classList.remove("active", "glass-ug");
+        navMenu.querySelector(".active");
+        //   .classList.remove("active", "inner-shadow");
         if (navMenu.classList.contains("open")) {
           // activar el nuevo nav
-          event.target.classList.add("active", "inner-shadow");
-          event.target.classList.remove("outer-shadow", "hover-in-shadow");
+          event.target.classList.add("active", "glass-ug");
+          //   event.target.classList.remove("glass-ug");
           // hide nav
           hideNavMenu();
         } else {
           let navItems = navMenu.querySelectorAll(".link-item");
           navItems.forEach((item) => {
             if (hash === item.hash) {
-              item.classList.add("active", "inner-shadow");
-              item.classList.remove("outer-shadow", "hover-in-shadow");
+              item.classList.add("active", "glass-ug");
+              //   item.classList.remove("outer-shadow", "hover-in-shadow");
             }
           });
           fadeOutEffect();

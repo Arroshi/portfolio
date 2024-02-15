@@ -26,14 +26,10 @@
   background-size: cover;
 }
 
-.bg-contnt.hidden-scrolling {
-  overflow-y: hidden;
-  /* transition: all 1s ease; */
-}
 section {
-  min-height: 100vh;
+  /* min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: center; */
 }
 .hide-scroll {
   overflow-y: hidden;
@@ -126,6 +122,9 @@ img {
 
 .justify-between {
   justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
 }
 
 .inner-shadow {
@@ -234,149 +233,6 @@ h2:before {
   color: #888888;
   font-family: var(--Blogger);
 }
-
-.effect-wrap .effect {
-  position: absolute;
-  z-index: -1;
-}
-
-.fade-out-effect {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-theme);
-  z-index: -1;
-  visibility: hidden;
-}
-
-.fade-out-effect.active {
-  visibility: visible;
-  z-index: 1001;
-  animation: fadeOut 0.3s ease-out;
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.effect-1 {
-  width: 30px;
-  height: 30px;
-  border: 4px solid #3b3355;
-  right: 10%;
-  bottom: 10%;
-  animation: spin 10s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.effect-2 {
-  left: 3%;
-  bottom: 10%;
-  width: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  animation: leftBounce 3s ease-in-out infinite;
-}
-
-.effect-2 div {
-  height: 3px;
-  width: 3px;
-  background-color: var(--color-2);
-  margin: 0 3px 8px;
-}
-
-@keyframes leftBounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(25px);
-  }
-}
-
-.effect-3 {
-  height: 180px;
-  width: 180px;
-  border: 25px solid whitesmoke;
-  border-radius: 15%;
-  left: 50%;
-  top: -120px;
-  animation: topBounce 3s ease-in-out infinite;
-}
-
-@keyframes topBounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translatex(25px);
-  }
-}
-
-.effect-4 {
-  border-top: 30px solid transparent;
-  border-left: 30px solid #de9e36;
-  left: 30%;
-  top: 20%;
-  animation: spin 15s linear infinite;
-}
-
-.effect-4::before {
-  content: "";
-  border-top: 30px solid transparent;
-  border-left: 30px solid #de9e36;
-  position: absolute;
-  opacity: 0.5;
-  left: -35px;
-  top: -25px;
-}
-
-@keyframes topBounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translatex(25px);
-  }
-}
-
-.effect-5 {
-  width: 50px;
-  height: 50px;
-  right: 10%;
-  top: 30%;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 15%;
-  overflow: hidden;
-  animation: spin 10s linear infinite;
-}
-
-.effect-5 div {
-  width: 1px;
-  background-color: darkolivegreen;
-}
-
-/*  */
 
 /*  */
 
@@ -499,8 +355,7 @@ h2:before {
   height: 2px;
   width: 16px;
   position: relative;
-  /* background-color: var(--color-prin); */
-  background-color: var(--color-sec);
+  background-color: var(--color-prin);
 }
 
 .header .hamburger_btn span::before,
@@ -513,8 +368,7 @@ h2:before {
   height: 2px;
 
   height: 100%;
-  /* background-color: var(--color-prin); */
-  background-color: var(--color-sec);
+  background-color: var(--color-prin);
 }
 
 .header .hamburger_btn span::before {
@@ -580,7 +434,7 @@ h2:before {
   background-color: var(--color-theme);
   z-index: 999;
   transform: translateX(0);
-  transition: all 0.1s ease;
+  transition: all 0.5s ease;
 }
 
 .nav-menu .close-nav-menu {
@@ -596,6 +450,7 @@ h2:before {
   cursor: pointer;
   text-align: center;
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .nav-menu .close-nav-menu:hover {
@@ -603,8 +458,12 @@ h2:before {
   transition: all 0.3s ease;
 }
 
-.nav-menu .close-nav-menu::after {
-  border-radius: 15%;
+.nav-menu .close-nav-menu b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 0;
 }
 
 .nav-menu ul {
@@ -631,7 +490,7 @@ h2:before {
   font-size: 28px;
   font-weight: 600;
   color: var(--color-prin);
-  padding: 5px 30px;
+  padding: 15px 45px;
   text-transform: capitalize;
   border-radius: 10px;
   transition: all 0.3s ease;
@@ -648,6 +507,7 @@ h2:before {
 .nav-menu ul li a:hover:not(.active) {
   opacity: 0.6;
   color: var(--color-sec);
+  background-color: rgba(255, 255, 255, 0.06);
 }
 
 .nav-menu-inner {
@@ -696,7 +556,7 @@ h2:before {
   position: relative;
 }
 
-.home-section .full-screen {
+.full-screen {
   padding: 50px 0;
   min-height: 100vh;
 }
@@ -843,7 +703,6 @@ h2:before {
 .about-section .about-info {
   flex: 0 0 60%;
   max-width: 60%;
-  padding: 0 15px;
   margin: auto;
 }
 
@@ -865,21 +724,20 @@ h2:before {
   margin: 30px 20px;
 }
 
-/* .about-section .about-info a {
-        text-align: center; 
-    }*/
-
 .about-section .about-tabs {
-  padding: 100px 15px 50px;
-  flex: 0 0 100%;
-  max-width: 100%;
-  text-align: center;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-section .about-tabs .tab-items {
+  padding-inline: 40px;
 }
 
 .about-section .about-tabs .tab-item {
   display: inline-block;
-  margin: 0 5px 10px;
-  padding: 5px 10px;
+  margin: 0 25px;
+  padding: 15px 30px;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -905,6 +763,7 @@ h2:before {
   flex: 0 0 100%;
   max-width: 100%;
   display: none;
+  margin-top: 3rem;
 }
 
 .about-section .tab-content.active {
@@ -924,14 +783,20 @@ h2:before {
 }
 
 .about-section .skills {
-  padding: 0 0 40px;
+  /* padding: 0 0 40px; */
+  margin-block-end: 40px;
 }
 
 .about-section .skills .skill-item {
-  flex: 0 0 50%;
+  flex: 0 0 calc(50% - 1%);
   max-width: 50%;
-  padding: 0 15px;
-  margin-bottom: 40px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.about-section .skills .skill-item.glass-bg,
+.about-section .skills .skill-item.glass-ug {
+  border-radius: 12px !important;
 }
 
 .about-section .skills .skill-item p {
@@ -942,9 +807,11 @@ h2:before {
 }
 
 .about-section .skills .skill-item .progress {
+  position: relative;
+  display: block;
   height: 20px;
   border-radius: 10px;
-  position: relative;
+  padding: 0;
 }
 
 .about-section .skills .skill-item .progress-bar {
@@ -958,12 +825,12 @@ h2:before {
 
 .about-section .skills .skill-item .progress-bar span {
   position: absolute;
-  right: 0;
+  right: -10px;
   top: 0;
   font-size: 16px;
   font-weight: 500;
   color: var(--color-sec);
-  margin-top: -40px;
+  margin-top: -30px;
 }
 
 .about-section .experience,
@@ -1003,6 +870,7 @@ h2:before {
 }
 
 .about-section .timeline .timeline-item-inner {
+  display: block;
   padding: 30px;
   border-radius: 5px;
   position: relative;
