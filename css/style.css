@@ -82,7 +82,7 @@ img {
 }
 
 .row {
-  display: flex;
+  display: flex !important;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -634,8 +634,9 @@ h2:before {
 .about-section .about-img {
   flex: 0 0 30%;
   max-width: 30%;
-  padding: 0 15px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .about-section .about-img .img-box {
@@ -650,6 +651,8 @@ h2:before {
 }
 
 .about-section .about-img .social-link {
+  display: flex;
+  justify-content: space-evenly;
   margin-top: 20px;
   text-align: center;
 }
@@ -663,6 +666,7 @@ h2:before {
   line-height: 40px;
   color: var(--color-prin);
   margin: 0 17px;
+  padding: 0;
   border-radius: 15%;
   transition: all 0.3s ease;
 }
@@ -769,6 +773,7 @@ h2:before {
 .about-section .tab-content.active {
   display: block;
   animation: fadeInTop 0.5s ease;
+  margin-block-end: 3rem;
 }
 
 @keyframes fadeInTop {
@@ -780,11 +785,6 @@ h2:before {
     opacity: 1;
     transform: translateY(0px);
   }
-}
-
-.about-section .skills {
-  /* padding: 0 0 40px; */
-  margin-block-end: 40px;
 }
 
 .about-section .skills .skill-item {
@@ -846,11 +846,11 @@ h2:before {
 
 .about-section .timeline::before {
   content: "";
-  width: 2px;
+  width: 5px;
   height: 100%;
-  left: 50%;
+  left: calc(50% - 2px);
   top: 0;
-  background-color: var(--color-ter);
+  background-color: var(--glass-wg);
   position: absolute;
 }
 
@@ -880,14 +880,14 @@ h2:before {
   font-size: 14px;
   font-weight: 500;
   display: block;
-  margin: 0 0 10px;
+  margin-bottom: 10px;
   text-transform: capitalize;
 }
 
 .about-section .timeline .timeline-item-inner h3 {
   font-size: 25px;
   font-weight: 600;
-  margin: 0 0 5px;
+  margin-bottom: 5px;
   text-transform: capitalize;
   color: var(--color-sec);
 }
@@ -896,7 +896,7 @@ h2:before {
   font-size: 16px;
   font-style: italic;
   display: block;
-  margin: 0;
+  margin-bottom: 10px;
   color: var(--color-sec);
   opacity: 0.8;
 }
@@ -905,38 +905,45 @@ h2:before {
   font-weight: 500;
   display: block;
   margin: 0 0 10px;
-  text-transform: capitalize;
-}
-
-.about-section .timeline .timeline-item-inner::before {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 2px;
-  background-color: var(--color-ter);
-  top: 37px;
-  z-index: -1;
 }
 
 .about-section
   .timeline
   .timeline-item:nth-child(odd)
   .timeline-item-inner::before {
-  right: -32px;
+  /* right: -50px;
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 35px;
+  background-color: var(--glass-wg);
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  top: 20px;
+  z-index: -1; */
 }
 
 .about-section
   .timeline
   .timeline-item:nth-child(even)
   .timeline-item-inner::before {
-  left: -32px;
+  /* left: -50px;
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 35px;
+  background-color: var(--glass-wg);
+  clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+  top: 20px;
+  z-index: -1; */
 }
 
 .about-section .timeline .timeline-item-inner .icon {
   height: 40px;
   width: 40px;
-  border: 1px solid var(--color-sec);
-  background-color: var(--color-sec);
+  /* border: 1px solid var(--color-sec); */
+  /* background-color: var(--color-sec); */
+  border: 1px solid var(--glass-wg);
+  background-color: var(--glass-ug);
   color: black;
   text-align: center;
   line-height: 40px;
@@ -947,11 +954,11 @@ h2:before {
 }
 
 .about-section .timeline .timeline-item:nth-child(odd) .icon {
-  right: -71px;
+  right: -68px;
 }
 
 .about-section .timeline .timeline-item:nth-child(even) .icon {
-  left: -69px;
+  left: -72px;
 }
 
 /* END ABOUT SECTION */
@@ -973,7 +980,7 @@ h2:before {
 
 .service-section .service-item-inner {
   padding: 50px 15px;
-  border-radius: 5px;
+  border-radius: 20px;
   text-align: center;
   width: 100%;
 }
@@ -986,6 +993,7 @@ h2:before {
   transition: all 0.3s ease;
   display: block;
   margin: 0 auto 30px;
+  padding: 0;
   position: relative;
 }
 
@@ -999,10 +1007,10 @@ h2:before {
   border-radius: 10%;
   transition: all 0.3s ease;
 }
-
+/* 
 .service-section .service-item-inner:hover .icon {
   box-shadow: var(--outer-shadow);
-}
+} */
 
 .service-section .service-item-inner .icon i {
   font-size: 25px;
@@ -1608,10 +1616,17 @@ h2:before {
 }
 
 /* END CONTACT */
+
+.glass-bg {
+  background-color: var(--glass-bg);
+}
+.glass-ug {
+  background-color: var(--glass-ug);
+}
+
 .glass-bg,
 .glass-ug {
   display: inline-block;
-  background-color: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 20px;

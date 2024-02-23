@@ -53,10 +53,7 @@
         document.querySelector(hash).classList.add("active");
         document.querySelector(hash).classList.remove("hide");
         // desactivar el active en el nav
-        navMenu
-          .querySelector(".active")
-          //   .classList.add("outer-shadow", "hover-in-shadow");
-          .classList.remove("active", "glass-ug");
+        navMenu.querySelector(".active").classList.remove("active", "glass-ug");
         navMenu.querySelector(".active");
         //   .classList.remove("active", "inner-shadow");
         if (navMenu.classList.contains("open")) {
@@ -97,11 +94,9 @@
     ) {
       const target = event.target.getAttribute("data-target");
       // desactivamos el "active" si esta en "tab-item"
-      tabContainer
-        .querySelector(".active")
-        .classList.remove("outer-shadow", "active");
+      tabContainer.querySelector(".active").classList.remove("active");
       // activar un nuevo "tab-item"
-      event.target.classList.add("active", "outer-shadow");
+      event.target.classList.add("active");
       // desactivar si existe "active" en "tab-content"
       aboutSection
         .querySelector(".tab-content.active")

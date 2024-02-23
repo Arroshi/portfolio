@@ -12,8 +12,6 @@
 
 <body>
 
-
-
     <div class="swiper mySwiper container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -43,7 +41,7 @@
             <div class="swiper-slide">
                 <div class="swiper-content">
                     <div class="swiper-img">
-                        <img src="https://mak.com.pe/wp-content/uploads/2024/02/Etapa-1.png" alt="">
+                        <img src="https://mak.com.pe/wp-content/uploads/2024/02/Etapa-2.png" alt="">
                     </div>
                 </div>
             </div>
@@ -53,16 +51,11 @@
         <div class="swiper-pagination"></div>
 
         <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
     </div>
 
-
     <style>
-        .swiper-wrapper {
-            margin: 52px 0;
-        }
-
         .container {
             max-width: 1300px;
             margin: 0 auto;
@@ -70,25 +63,25 @@
 
         .swiper {
             margin-top: -35px !important;
+            z-index: 0 !important;
+            height: 400px;
+            display: flex;
+            align-items: center;
         }
-
 
         .swiper-slide-next .swiper-content .swiper-img {
             width: 100%;
             height: 100%;
         }
 
-
-        .swiper-slide:not(.swiper-slide-next) {
-            transform: scale(0.75);
+        .swiper-slide:not(.swiper-slide-next) img {
+            transform: scale(0.60);
         }
 
-
-        .swiper-slide-next {
+        .swiper-slide-next img {
             transform: scale(1.2) !important;
         }
 
-        /* 
         .swiper-slide.swiper-slide-next .swiper-content {
             width: 100%;
         }
@@ -96,17 +89,6 @@
         .swiper-slide {
             display: flex;
             align-items: center;
-            justify-content: center;
-            background-color: transparent !important;
-            margin-bottom: 30px !important;
-            height: 420px;
-            width: 100%;
-            position: relative;
-            color: #1D3058;
-        }
-
-        .swiper-slide-next img {
-            opacity: 1;
         }
 
         .swiper-slide img {
@@ -114,11 +96,6 @@
             height: 100%;
         }
 
-        .swiper-content .swiper-img {
-            width: 320px;
-            height: 200px;
-            overflow: hidden;
-        }
 
         .swiper-pagination-bullet {
             width: 11px !important;
@@ -129,31 +106,7 @@
         .swiper-pagination-bullet-active {
             background-color: #1D3058 !important;
         }
-
-        .swiper-button-next,
-        .swiper-button-prev {
-            top: inherit !important;
-            bottom: -1.5%;
-        }
-
-        .swiper-button-prev,
-        .swiper-container-rtl .swiper-button-next {
-            background-image: url("https://mak.com.pe/wp-content/uploads/2024/01/arrow_left.png");
-            left: 40% !important;
-        }
-
-        .swiper-button-next,
-        .swiper-container-rtl .swiper-button-next {
-            background-image: url("https://mak.com.pe/wp-content/uploads/2024/01/arrow_right.png");
-            right: 40% !important;
-        }
-
-        .swiper-button-next:after,
-        .swiper-button-prev:after {
-            font-size: 0 !important;
-        } */
     </style>
-
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -165,6 +118,10 @@
                 // If we need pagination
                 pagination: {
                     el: '.swiper-pagination',
+                    clickable: true, // Permite hacer clic en los dots
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '"></span>'; // Personaliza la apariencia de los dots si es necesario
+                    },
                 },
 
                 // Navigation arrows
@@ -172,12 +129,12 @@
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
+                allowSlideClick: true
             })
         });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script>
-
 </body>
 
-</html> -->
+</html>

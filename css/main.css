@@ -30,6 +30,10 @@
   --color-11: #735f32;
   --color-12: #c69749;
   /* ------ */
+  /* GLASS GROUND */
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-ug: rgba(255, 255, 255, 0.06);
+  --glass-wg: rgba(255, 255, 255, 0.3);
   /* COLORS SHADOWS */
   --shadow-1-1: #d0d0d0;
   --shadow-1-2: #f8f8f8;
