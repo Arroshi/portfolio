@@ -141,11 +141,9 @@ function bodyShowScroll() {
       !event.target.classList.contains("active")
     ) {
       // desactivamos el "active" si esta en "filter-item"
-      filterContainer
-        .querySelector(".active")
-        .classList.remove("outer-shadow", "active");
+      filterContainer.querySelector(".active").classList.remove("active");
       // activamos un nuevo "filter-item"
-      event.target.classList.add("active", "outer-shadow");
+      event.target.classList.add("active");
       const target = event.target.getAttribute("data-target");
 
       portfolioItems.forEach((item) => {
