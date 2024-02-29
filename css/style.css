@@ -6,6 +6,7 @@
   box-sizing: border-box;
   outline: none;
   font-family: var(--Blogger);
+  cursor: default;
 }
 
 .bg {
@@ -669,6 +670,7 @@ h2:before {
   padding: 0;
   border-radius: 15%;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .about-section .about-img .social-link a:nth-child(odd),
@@ -732,7 +734,7 @@ h2:before {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 .about-section .personal-info .data,
@@ -780,14 +782,19 @@ h2:before {
   /* padding-inline: 30px; */
   padding: 20px 0;
   width: 140px;
+  /* pointer-events: ; */
 }
 
 .about-section .personal-info .hobbies .hobbies-items .hobbies-item i {
   font-size: 30px;
 }
 
+.about-section .personal-info .hobbies .hobbies-items .hobbies-item:hover span {
+  color: var(--color-sec);
+}
+
 .about-section .about-tabs {
-  margin-top: 3rem;
+  margin-top: 5rem;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -823,13 +830,19 @@ h2:before {
 }
 
 .tab-content {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .about-section .tab-content {
   flex: 0 0 100%;
   max-width: 100%;
   display: none;
+}
+
+.about-section .tab-content .tec-habilities,
+.about-section .tab-content .pro-habilities {
+  width: 100%;
+  margin-top: 2rem;
 }
 
 .about-section .tab-content.active {
