@@ -753,9 +753,16 @@ h2:before {
   margin-bottom: 10px;
 }
 
+.about-section .personal-info .data ul li:last-child p {
+  padding: 5px 10px;
+  /* background-color: var(--color-sec); */
+  /* backdrop-filter: blur(1px); */
+  text-transform: uppercase;
+}
+
 .about-section .personal-info .data ul li span {
-  color: var(--color-sec);
   font-weight: 900;
+  color: var(--color-sec);
 }
 
 .about-section .personal-info .hobbies .hobbies-items {
