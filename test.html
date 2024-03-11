@@ -62,11 +62,16 @@
         }
 
         .swiper {
-            margin-top: -35px !important;
+            /* margin-top: -35px !important; */
             z-index: 0 !important;
-            height: 400px;
-            display: flex;
-            align-items: center;
+        }
+
+        .swiper-wrapper {
+            height: 350px;
+        }
+
+        .swiper-content {
+            padding-inline: 10px;
         }
 
         .swiper-slide-next .swiper-content .swiper-img {
@@ -74,11 +79,20 @@
             height: 100%;
         }
 
-        .swiper-slide:not(.swiper-slide-next) img {
-            transform: scale(0.60);
+        /* .swiper-slide .swiper-content .swiper-img img {
+            transform: scale(0.75);
         }
 
-        .swiper-slide-next img {
+        .swiper-slide.swiper-slide-next .swiper-content .swiper-img img {
+            transform: scale(1.2);
+        } */
+
+
+        .swiper-slide:not(.swiper-slide-next) {
+            transform: scale(0.75);
+        }
+
+        .swiper-slide-next {
             transform: scale(1.2) !important;
         }
 
@@ -89,6 +103,12 @@
         .swiper-slide {
             display: flex;
             align-items: center;
+            justify-content: center;
+            background-color: transparent !important;
+            /* margin-bottom: 30px !important; */
+            /* height: 420px; */
+            width: 100%;
+            position: relative;
         }
 
         .swiper-slide img {
@@ -104,7 +124,7 @@
         }
 
         .swiper-pagination-bullet-active {
-            background-color: #1D3058 !important;
+            background-color: #124ef3 !important;
         }
     </style>
 
@@ -118,10 +138,6 @@
                 // If we need pagination
                 pagination: {
                     el: '.swiper-pagination',
-                    clickable: true, // Permite hacer clic en los dots
-                    renderBullet: function (index, className) {
-                        return '<span class="' + className + '"></span>'; // Personaliza la apariencia de los dots si es necesario
-                    },
                 },
 
                 // Navigation arrows
@@ -129,7 +145,6 @@
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
-                allowSlideClick: true
             })
         });
     </script>
