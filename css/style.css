@@ -792,6 +792,10 @@ h2:before {
   /* pointer-events: ; */
 }
 
+.about-section .personal-info .hobbies .hobbies-items .hobbies-item:hover i {
+  transform: scale(1.1);
+}
+
 .about-section .personal-info .hobbies .hobbies-items .hobbies-item i {
   font-size: 30px;
 }
@@ -1088,16 +1092,28 @@ h2:before {
   border-radius: 20px;
   text-align: center;
   width: 100%;
+  cursor: pointer;
+}
+
+.service-section .service-item-inner .list-group-flush {
+  list-style: circle;
+  margin: 0 auto;
+  padding: revert-layer;
+}
+
+.service-section .service-item-inner .list-group-flush .list-group-item {
+  text-align: left;
+  user-select: none;
 }
 
 .service-section .service-item-inner .icon {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   text-align: center;
   border-radius: 10%;
   transition: all 0.3s ease;
   display: block;
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
   padding: 0;
   position: relative;
 }
@@ -1114,22 +1130,29 @@ h2:before {
 }
 
 .service-section .service-item-inner .icon i {
-  font-size: 25px;
-  line-height: 60px;
+  font-size: 30px;
+  line-height: 80px;
   transition: all 0.3s ease;
   border-radius: 10%;
 }
 
 .service-section .service-item-inner:hover .icon i {
   color: var(--color-sec);
+  /* font-size: 35px; */
+  transform: scale(1.1);
 }
 
 .service-section .service-item-inner h3 {
-  font-size: 20px;
+  font-size: 23px;
   font-weight: 600;
   color: var(--color-sec);
-  margin: 30px 0 10px;
+  margin-bottom: 15px;
   text-transform: capitalize;
+}
+
+.service-section .service-item-inner:hover h3 {
+  /* font-size: 25px; */
+  transform: scale(1.1);
 }
 
 .service-section .service-item-inner p {
