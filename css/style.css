@@ -6,7 +6,7 @@
   box-sizing: border-box;
   outline: none;
   font-family: var(--Blogger);
-  cursor: default;
+  /* cursor: default; */
 }
 
 .bg {
@@ -68,9 +68,9 @@ ul {
   padding: 0;
 }
 
-p {
+/* p {
   color: var(--color-prin);
-}
+} */
 
 img {
   vertical-align: middle;
@@ -641,20 +641,20 @@ h2:before {
 }
 
 .about-section .about-img .img-box {
-  padding: 15px;
-  border-radius: 5px;
+  /* padding: 15px; */
+  /* border-radius: 5px; */
 }
 
 .about-section .about-img .img-box img {
   width: 100%;
-  border: 10px solid transparent;
-  border-radius: 5px;
+  /* border: 10px solid transparent; */
+  border-radius: 15px;
 }
 
 .about-section .about-img .social-link {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -670,6 +670,9 @@ h2:before {
   padding: 0;
   border-radius: 15%;
   transition: all 0.3s ease;
+  cursor: pointer;
+}
+.about-section .about-img .social-link a i {
   cursor: pointer;
 }
 
@@ -713,7 +716,7 @@ h2:before {
 }
 
 .about-section .about-info p {
-  font-size: 15px;
+  font-size: 16px;
   line-height: 26px;
   margin-bottom: 15px;
 }
@@ -760,6 +763,8 @@ h2:before {
   /* background-color: var(--color-sec); */
   /* backdrop-filter: blur(1px); */
   text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
 }
 
 .about-section .personal-info .data ul li span {
@@ -782,6 +787,8 @@ h2:before {
   /* padding-inline: 30px; */
   padding: 20px 0;
   width: 140px;
+  cursor: pointer;
+  user-select: none;
   /* pointer-events: ; */
 }
 
@@ -844,12 +851,25 @@ h2:before {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 2rem;
+  /* justify-content: space-around; */
+  margin-top: 1.5rem;
   gap: 1rem;
 }
 
-.tec-habilities .tec-hab-item {
+.about-section .tab-content .tec-habilities {
+  justify-content: flex-start;
+}
+.about-section .tab-content .pro-habilities {
+  justify-content: flex-end;
+}
+
+.hab-item {
+  cursor: pointer;
+  user-select: none;
+}
+
+.hab-item:hover {
+  color: var(--color-sec);
 }
 
 .about-section .tab-content.active {
@@ -921,11 +941,6 @@ h2:before {
   font-weight: 500;
   color: var(--color-sec);
   margin-top: -30px;
-}
-
-.about-section .experience,
-.about-section .education {
-  padding-bottom: 80px;
 }
 
 .about-section .timeline {
