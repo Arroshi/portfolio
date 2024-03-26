@@ -1104,6 +1104,7 @@ h2:before {
 .service-section .service-item-inner .list-group-flush .list-group-item {
   text-align: left;
   user-select: none;
+  margin-bottom: 0.5rem;
 }
 
 .service-section .service-item-inner .icon {
@@ -1203,22 +1204,27 @@ h2:before {
 }
 
 .portfolio-section .portfolio-item-inner {
-  padding: 15px;
+  margin: 10px;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.portfolio-section .portfolio-item-inner p {
-  font-size: 16px;
-  margin: 10px 0 0;
+.portfolio-section .portfolio-item-inner .portfolio-item-title {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
   color: var(--color-prin);
   text-transform: capitalize;
+}
+
+.portfolio-section .portfolio-item-inner:hover .portfolio-item-title {
+  color: var(--color-sec);
 }
 
 .portfolio-section .portfolio-item {
   flex: 0 0 33.33%;
   max-width: 33.33%;
-  padding: 15px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -1239,7 +1245,7 @@ h2:before {
 .portfolio-section .portfolio-item-img img {
   border-radius: 5px;
   width: 100%;
-  height: 190px;
+  height: 200px;
   transition: all 0.3s ease;
 }
 
@@ -1266,8 +1272,11 @@ h2:before {
 /* PORTFOLIO POPUP */
 
 .portfolio-popup {
-  background-color: var(--color-theme);
+  /* background-color: var(--color-theme); */
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(10px);
   position: fixed;
+  display: flex;
   top: 0;
   left: 0;
   width: 100%;
@@ -1276,6 +1285,17 @@ h2:before {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
+}
+
+.portfolio-popup .portfolio-popup-inner {
+  width: 90%;
+  height: 90%;
+  margin: auto auto;
+  background-image: url("../images/BlackPaper_.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
 }
 
 .portfolio-popup.open {
