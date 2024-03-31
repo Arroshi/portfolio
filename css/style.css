@@ -1206,16 +1206,17 @@ h2:before {
 .portfolio-section .portfolio-item-inner {
   margin: 10px;
   border-radius: 5px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .portfolio-section .portfolio-item-inner .portfolio-item-title {
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 2px;
-  margin-bottom: 10px;
+  margin-top: 1.5rem;
   color: var(--color-prin);
   text-transform: capitalize;
+  text-align: center;
 }
 
 .portfolio-section .portfolio-item-inner:hover .portfolio-item-title {
@@ -1264,7 +1265,17 @@ h2:before {
 }
 
 .portfolio-section .portfolio-item-details {
-  display: none;
+  margin-top: 1rem;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.portfolio-section .portfolio-item-details a {
+  padding: 15px 30px;
+  margin: 0 20px;
+  cursor: pointer;
 }
 
 /* END PORTFOLIO */
@@ -1298,6 +1309,11 @@ h2:before {
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
+  overflow: auto;
+}
+
+.portfolio-popup .portfolio-popup-inner::-webkit-scrollbar {
+  width: 0;
 }
 
 .portfolio-popup.open {
