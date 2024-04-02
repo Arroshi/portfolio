@@ -399,4 +399,55 @@
     }, 600);
   });
   // END PRELOADER
+
+  // const phrases = ["Desarrollador. ", "Diseñador Web. ", "FreeLance. "];
+  // const delay = 100; // Milisegundos de retraso entre caracteres
+  // const pauseDuration = 1500; // Duración en milisegundos de la pausa entre frases
+  // let currentPhraseIndex = 0;
+
+  // const typeWriter = document.getElementById("typewriter");
+  // let currentText = "";
+  // let letterIndex = 0;
+
+  // function type() {
+  //   if (letterIndex < phrases[currentPhraseIndex].length) {
+  //     currentText += phrases[currentPhraseIndex].charAt(letterIndex);
+  //     typeWriter.textContent = currentText;
+  //     letterIndex++;
+  //     setTimeout(type, delay);
+  //   } else {
+  //     setTimeout(erase, pauseDuration);
+  //   }
+  // }
+
+  // function erase() {
+  //   if (currentText.length > 0) {
+  //     currentText = currentText.substring(0, currentText.length - 1);
+  //     typeWriter.textContent = currentText;
+  //     setTimeout(erase, delay);
+  //   } else {
+  //     currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+  //     letterIndex = 0;
+  //     setTimeout(type, delay);
+  //   }
+  // }
+
+  // type(); // Comienza el efecto de la máquina de escribir
+
+  const typed = new Typed(".typed", {
+    strings: [
+      "<i>Desarrollador</i>",
+      "<i>Diseñador Web</i>",
+      "<i>FreeLancer</i>",
+    ],
+    typeSpeed: 75,
+    startDelay: 400,
+    backSpeed: 75,
+    backDelay: 1500,
+    loop: true,
+    loopCount: false,
+    showCursor: true,
+    cursorChar: "|",
+    contentType: "html",
+  });
 })();
