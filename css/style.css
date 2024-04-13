@@ -692,12 +692,12 @@ h2:before {
 }
 
 .about-section .about-img .social-link a:nth-child(odd) i,
-.about-section .about-img .social-link a:nth-child(odd) i::after {
+.about-section .about-img .social-link a:nth-child(odd) i::before {
   transform: rotate(-10deg);
 }
 
 .about-section .about-img .social-link a:nth-child(even) i,
-.about-section .about-img .social-link a:nth-child(even) i::after {
+.about-section .about-img .social-link a:nth-child(even) i::before {
   transform: rotate(10deg);
 }
 
