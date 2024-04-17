@@ -156,37 +156,37 @@
     }
   });
 
-  // portfolioItemsContainer.addEventListener("click", (event) => {
-  //   if (event.target.closest(".portfolio-item-inner")) {
-  //     const portfolioItem = event.target.closest(
-  //       ".portfolio-item-inner"
-  //     ).parentElement;
-  //     // console.log(portfolioItem);
-  //     // // obtener el "portfolioItem"
-  //     itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(
-  //       portfolioItem
-  //     );
-  //     // console.log(itemIndex);
-  //     // screenshots = portfolioItems[itemIndex]
-  //     //   .querySelector(".portfolio-item-img img")
-  //     //   .getAttribute("data-screenshots");
-  //     // // convertir "screenshots" a array
-  //     // screenshots = screenshots.split(", ");
+  portfolioItemsContainer.addEventListener("click", (event) => {
+    if (event.target.closest(".portfolio-item-inner")) {
+      const portfolioItem = event.target.closest(
+        ".portfolio-item-inner"
+      ).parentElement;
+      // console.log(portfolioItem);
+      // // obtener el "portfolioItem"
+      itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(
+        portfolioItem
+      );
+      // console.log(itemIndex);
+      // screenshots = portfolioItems[itemIndex]
+      //   .querySelector(".portfolio-item-img img")
+      //   .getAttribute("data-screenshots");
+      // // convertir "screenshots" a array
+      // screenshots = screenshots.split(", ");
 
-  //     // console.log(screenshots);
-  //     // if (screenshots.length === 1) {
-  //     //   nextBtn.style.display = "none";
-  //     //   prevBtn.style.display = "none";
-  //     // } else {
-  //     //   nextBtn.style.display = "block";
-  //     //   prevBtn.style.display = "block";
-  //     // }
-  //     // slideIndex = 0;
-  //     popupToggle();
-  //     // popupSlideShow();
-  //     popupDetails();
-  //   }
-  // });
+      // console.log(screenshots);
+      // if (screenshots.length === 1) {
+      //   nextBtn.style.display = "none";
+      //   prevBtn.style.display = "none";
+      // } else {
+      //   nextBtn.style.display = "block";
+      //   prevBtn.style.display = "block";
+      // }
+      // slideIndex = 0;
+      popupToggle();
+      // popupSlideShow();
+      popupDetails();
+    }
+  });
 
   function popupToggle() {
     // popup.classList.toggle("open");
@@ -202,21 +202,6 @@
     bodyHideScroll();
   }
 
-  // function popupSlideShow() {
-  //   const imgSrc = screenshots[slideIndex];
-  //   console.log(imgSrc);
-  //   const popupImg = popup.querySelector(".pp-img");
-  //   console.log(popupImg);
-  //   popup.querySelector(".pp-loader").classList.add("active");
-  //   popupImg.src = imgSrc;
-  //   popupImg.onload = () => {
-  //     // desactivamos la clase "active"
-  //     popup.querySelector(".pp-loader").classList.remove("active");
-  //   };
-  //   popup.querySelector(".pp-counter").innerHTML =
-  //     slideIndex + 1 + " of " + screenshots.length;
-  // }
-
   function popupDetails() {
     if (!portfolioItems[itemIndex].querySelector(".portfolio-item-details")) {
       projectDetailsBtn.style.display = "none";
@@ -229,16 +214,35 @@
     // ).innerHTML;
     // // popup.querySelector(".pp-project-details").innerHTML = details;
     // // obtener el title de los project
+    // console.log(portfolioItems[itemIndex]);
     const title = portfolioItems[itemIndex].querySelector(
       ".portfolio-item-title"
     ).innerHTML;
-    console.log(title);
+    // console.log(title);
     popup.querySelector(".pp-title h2").innerHTML = title;
     // // obtener la category de los project
     const category = portfolioItems[itemIndex].getAttribute("data-category");
     popup.querySelector(".pp-project-category").innerHTML = category
       .split("-")
       .join(" ");
+    // // obtener la descripcion del project
+    const descriptionContent = portfolioItems[itemIndex].querySelector(
+      ".portfolio-item-description p"
+    ).innerHTML;
+    popup.querySelector(".pp-main-description").innerHTML = descriptionContent;
+    // // obtener los elementos usados en el project
+    const detailsContent = portfolioItems[itemIndex].querySelectorAll(
+      ".portfolio-item-elements span"
+    );
+    // console.log(detailsContent);
+    detailsContent.forEach((element) => {
+      var newElement = document.createElement("span");
+      newElement.classList.add("glass-ug");
+
+      newElement.textContent = element.textContent;
+
+      popup.querySelector(".pp-main-details-elements").appendChild(newElement);
+    });
   }
 
   // projectDetailsBtn.addEventListener("click", () => {
@@ -267,29 +271,31 @@
   }
 
   // NEXT SLIDE
-  nextBtn.addEventListener("click", () => {
-    if (slideIndex === screenshots.length - 1) {
-      slideIndex = 0;
-    } else {
-      slideIndex++;
-    }
-    popupSlideShow();
-  });
+  // nextBtn.addEventListener("click", () => {
+  //   if (slideIndex === screenshots.length - 1) {
+  //     slideIndex = 0;
+  //   } else {
+  //     slideIndex++;
+  //   }
+  //   popupSlideShow();
+  // });
 
   // PREV SLIDE
-  prevBtn.addEventListener("click", () => {
-    if (slideIndex === 0) {
-      slideIndex = screenshots.length - 1;
-    } else {
-      slideIndex--;
-    }
-    popupSlideShow();
-  });
+  // prevBtn.addEventListener("click", () => {
+  //   if (slideIndex === 0) {
+  //     slideIndex = screenshots.length - 1;
+  //   } else {
+  //     slideIndex--;
+  //   }
+  //   popupSlideShow();
+  // });
 
   // CLOSE BTN
   closeBtn.addEventListener("click", () => {
     // popupToggle();
     popup.classList.remove("open");
+
+    popup.querySelector(".pp-main-details-elements").innerHTML = "";
 
     // if (projectDetailsContainer.classList.contains("active")) {
     //   popupDetailsToggle();
