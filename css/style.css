@@ -1510,6 +1510,14 @@ h2:before {
   /* flex: 0 0 40%; */
   width: calc(30% - 10px);
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.portfolio-popup .pp-main-inner .pp-main-details h3 {
+  color: var(--color-sec);
+  margin-block: 5px 10px;
 }
 
 .portfolio-popup .pp-img {

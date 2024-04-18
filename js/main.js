@@ -228,13 +228,41 @@
     // // obtener la descripcion del project
     const descriptionContent = portfolioItems[itemIndex].querySelector(
       ".portfolio-item-description p"
-    ).innerHTML;
-    popup.querySelector(".pp-main-description").innerHTML = descriptionContent;
+    );
+
+    console.log(descriptionContent);
+    // if (descriptionContent !== null) {
+    var titleContent = document.createElement("div");
+    titleContent.classList.add("pp-description-title");
+    var titleDesc = document.createElement("h3");
+    titleDesc.textContent = "RESUMEN";
+    popup.querySelector(".pp-main-description").appendChild(titleContent);
+    popup.querySelector(".pp-description-title").appendChild(titleDesc);
+    // }
+
+    var descContent = document.createElement("p");
+    descContent.classList.add("glass-ug");
+
+    descContent.textContent = descriptionContent.textContent;
+
+    popup.querySelector(".pp-main-description").appendChild(descContent);
+
     // // obtener los elementos usados en el project
     const detailsContent = portfolioItems[itemIndex].querySelectorAll(
       ".portfolio-item-elements span"
     );
     // console.log(detailsContent);
+
+    var elementsContent = document.createElement("div");
+    elementsContent.classList.add("pp-elements-title");
+    var elementsDesc = document.createElement("h3");
+    elementsDesc.textContent = "HERRAMIENTAS";
+
+    popup
+      .querySelector(".pp-main-details-elements")
+      .appendChild(elementsContent);
+    popup.querySelector(".pp-elements-title").appendChild(elementsDesc);
+
     detailsContent.forEach((element) => {
       var newElement = document.createElement("span");
       newElement.classList.add("glass-ug");
@@ -295,6 +323,7 @@
     // popupToggle();
     popup.classList.remove("open");
 
+    popup.querySelector(".pp-main-description").innerHTML = "";
     popup.querySelector(".pp-main-details-elements").innerHTML = "";
 
     // if (projectDetailsContainer.classList.contains("active")) {
