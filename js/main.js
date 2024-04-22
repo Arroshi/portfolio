@@ -253,15 +253,18 @@
     );
     // console.log(detailsContent);
 
-    var elementsContent = document.createElement("div");
-    elementsContent.classList.add("pp-elements-title");
-    var elementsDesc = document.createElement("h3");
-    elementsDesc.textContent = "HERRAMIENTAS";
+    var elementContent = document.createElement("div");
+    elementContent.classList.add("pp-elements-title");
+    var elementDesc = document.createElement("h3");
+    elementDesc.textContent = "HERRAMIENTAS";
 
     popup
       .querySelector(".pp-main-details-elements")
-      .appendChild(elementsContent);
-    popup.querySelector(".pp-elements-title").appendChild(elementsDesc);
+      .appendChild(elementContent);
+    popup.querySelector(".pp-elements-title").appendChild(elementDesc);
+
+    var elementsContent = document.createElement("div");
+    elementsContent.classList.add("pp-elements-content");
 
     detailsContent.forEach((element) => {
       var newElement = document.createElement("span");
@@ -269,7 +272,10 @@
 
       newElement.textContent = element.textContent;
 
-      popup.querySelector(".pp-main-details-elements").appendChild(newElement);
+      popup
+        .querySelector(".pp-main-details-elements")
+        .appendChild(elementsContent);
+      popup.querySelector(".pp-elements-content").appendChild(newElement);
     });
   }
 

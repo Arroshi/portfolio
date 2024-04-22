@@ -1207,6 +1207,7 @@ h2:before {
   margin: 10px;
   border-radius: 5px;
   user-select: none;
+  cursor: pointer;
 }
 
 .portfolio-section .portfolio-item-inner .portfolio-item-title {
@@ -1271,6 +1272,7 @@ h2:before {
   border: none;
   outline: none;
   background-color: transparent;
+  display: none;
 }
 
 .portfolio-section .portfolio-item-details .btn-details {
@@ -1520,6 +1522,20 @@ h2:before {
   margin-block: 5px 10px;
 }
 
+.portfolio-popup .pp-main-inner .pp-main-details-elements .pp-elements-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.portfolio-popup
+  .pp-main-inner
+  .pp-main-details-elements
+  .pp-elements-content
+  .glass-ug {
+  padding: 10px 15px;
+  border-radius: 12px;
+}
 .portfolio-popup .pp-img {
   max-width: 100%;
   width: auto;
