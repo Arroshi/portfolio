@@ -8,7 +8,25 @@
 
     <title>Portafolio</title>
 
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./resources/css/main.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/all.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/brands.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/brands.min.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/regular.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/regular.min.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/solid.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/svg-with-js.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/svg-with-js.min.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/v4-font-face.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/v4-font-face.min.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/v4-shims.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/v4-shims.min.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/v5-font-face.css">
+    <link rel="stylesheet" href="./resources/fontawesome/css/v5-font-face.min.css">
     <!-- <link rel="stylesheet" href="./css/font_awesome.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
@@ -16,6 +34,7 @@
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" />
 
+    <link rel="stylesheet" href="https://unpkg.com/@splidejs/splide@3/dist/css/splide.min.css">
 
 </head>
 
@@ -548,9 +567,9 @@
                     <div class="portfolio-item" data-category="web">
                         <div class="portfolio-item-inner glass-ug">
                             <div class="portfolio-item-img">
-                                <img src="images/dash.png" alt="portfolio">
-                                <!-- <img src="images/dash.png" alt="portfolio"
-                                    data-screenshots="large/login.png, large/dash.png, large/usuario.png, large/productos.png, large/reporte.png"> -->
+                                <!-- <img src="images/dash.png" alt="portfolio"> -->
+                                <img src="images/dash.png" alt="portfolio"
+                                    data-screenshots="large/login.png, large/dash.png, large/usuario.png, large/productos.png, large/reporte.png">
                             </div>
                             <p class="portfolio-item-title">Project Inventary</p>
                             <div class="portfolio-item-details">
@@ -891,11 +910,17 @@
                     <!-- <div class="pp-project-details-btn outer-shadow hover-in-shadow ">Project Details<i
                             class="fas fa-plus "></i></div>
 
-                    <img class="pp-img outer-shadow " src=" " alt="img ">
-                    <div class="pp-counter "></div> -->
+                             -->
                     <div class="pp-main-content">
-                        <iframe class="pp-main-iframe glass-bg" src="https://arroshi.github.io/Glowing-Dots-Background/"
-                            frameborder="0"></iframe>
+                        <img class="pp-img glass-ug" src=" " alt="img ">
+                        <span class="pp-counter "></span>
+                        <!-- <iframe class="pp-main-iframe glass-bg" src="https://arroshi.github.io/Glowing-Dots-Background/"
+                            frameborder="0"></iframe> -->
+
+                        <!-- PP NAVIGATION -->
+                        <div class="pp-prev "><i class="fas fa-play "></i></div>
+                        <div class="pp-next "><i class="fas fa-play "></i></div>
+                        <!-- END PP NAVIGATION -->
                     </div>
 
 
@@ -911,10 +936,7 @@
                 <!-- <div class="pp-loader">
                     <div></div>
                 </div> -->
-                <!-- PP NAVIGATION -->
-                <!-- <div class="pp-prev "><i class="fas fa-play "></i></div> -->
-                <!-- <div class="pp-next "><i class="fas fa-play "></i></div> -->
-                <!-- END PP NAVIGATION -->
+
             </div>
         </div>
 
@@ -939,7 +961,9 @@
     </div>-->
     <!-- END STYLE SWITCHER -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="js/main.js "></script>
+    <script src="./resources/js/main.js "></script>
+    <script src="https://unpkg.com/@splidejs/splide@3/dist/js/splide.min.js"></script>
+
     <!-- <script src="js/font_awesome.js "></script> -->
     <!-- <script src="js/style-switcher.js "></script> -->
 
