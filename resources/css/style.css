@@ -21,8 +21,7 @@
   /* background-color: var(--color-theme); */
 
   color: var(--color-prin);
-  background-image: url("./../../images/BlackPaper_.jpg");
-  /* background-image: url("/images/BlackPaper_.jpg"); */
+  background-image: url("../../resources/images/BlackPaper.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1317,7 +1316,7 @@ h2:before {
   height: 90%;
   margin: auto auto;
   padding: 1rem 2rem;
-  background-image: url("../images/BlackPaper_.jpg");
+  background-image: url("../../resources/images/BlackPaper.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
