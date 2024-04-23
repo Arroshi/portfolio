@@ -1596,8 +1596,12 @@ h2:before {
 .portfolio-popup .pp-prev,
 .portfolio-popup .pp-next {
   position: absolute;
-  top: 50%;
-  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* top: 50%; */
+  top: 0;
+  height: 100%;
   width: 40px;
   text-align: center;
   font-size: 20px;
@@ -1605,7 +1609,7 @@ h2:before {
   z-index: 1010;
   color: var(--color-prin);
   transition: all 0.3s ease;
-  opacity: 0.6;
+  opacity: 0;
 }
 
 .portfolio-popup .pp-prev:hover,
