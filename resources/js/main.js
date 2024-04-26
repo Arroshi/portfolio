@@ -173,7 +173,6 @@
       // convertir "screenshots" a array
       screenshots = screenshots.split(", ");
 
-      console.log(screenshots);
       // if (screenshots.length === 1) {
       //   nextBtn.style.display = "none";
       //   prevBtn.style.display = "none";
@@ -209,10 +208,14 @@
     // console.log(popupImg);
     popup.querySelector(".pp-loader").classList.add("active");
     popupImg.src = imgSrc;
+
     popupImg.onload = () => {
       // desactivamos la clase "active"
-      popup.querySelector(".pp-loader").classList.remove("active");
+      setTimeout(() => {
+        popup.querySelector(".pp-loader").classList.remove("active");
+      }, 1000);
     };
+
     popup.querySelector(".pp-counter").innerHTML =
       slideIndex + 1 + " de " + screenshots.length;
   }
@@ -220,16 +223,10 @@
   function popupDetails() {
     if (!portfolioItems[itemIndex].querySelector(".portfolio-item-details")) {
       projectDetailsBtn.style.display = "none";
-      return; //end fuction execute
+      return;
     }
-    // projectDetailsBtn.style.display = "block";
-    // // obtener los detalles del project
-    // const details = portfolioItems[itemIndex].querySelector(
-    //   ".portfolio-item-details"
-    // ).innerHTML;
-    // // popup.querySelector(".pp-project-details").innerHTML = details;
+
     // // obtener el title de los project
-    // console.log(portfolioItems[itemIndex]);
     const title = portfolioItems[itemIndex].querySelector(
       ".portfolio-item-title"
     ).innerHTML;
@@ -240,20 +237,20 @@
     popup.querySelector(".pp-project-category").innerHTML = category
       .split("-")
       .join(" ");
+    // ----- RESUMEN
     // // obtener la descripcion del project
     const descriptionContent = portfolioItems[itemIndex].querySelector(
       ".portfolio-item-description p"
     );
 
     // console.log(descriptionContent);
-    // if (descriptionContent !== null) {
     var titleContent = document.createElement("div");
     titleContent.classList.add("pp-description-title");
     var titleDesc = document.createElement("h3");
     titleDesc.textContent = "RESUMEN";
+
     popup.querySelector(".pp-main-description").appendChild(titleContent);
     popup.querySelector(".pp-description-title").appendChild(titleDesc);
-    // }
 
     var descContent = document.createElement("p");
     descContent.classList.add("glass-ug");
@@ -266,8 +263,9 @@
     const detailsContent = portfolioItems[itemIndex].querySelectorAll(
       ".portfolio-item-elements span"
     );
-    // console.log(detailsContent);
+    // ----- RESUMEN
 
+    // ----- HERRAMIENTAS
     var elementContent = document.createElement("div");
     elementContent.classList.add("pp-elements-title");
     var elementDesc = document.createElement("h3");
@@ -292,32 +290,37 @@
         .appendChild(elementsContent);
       popup.querySelector(".pp-elements-content").appendChild(newElement);
     });
+    // ----- HERRAMIENTAS
+
+    // ----- ENLACES
+    const socialContent = portfolioItems[itemIndex].querySelector(
+      ".portfolio-item-social"
+    );
+
+    var enlaceContent = document.createElement("div");
+    enlaceContent.classList.add("pp-social-title");
+    var enlaceDesc = document.createElement("h3");
+    enlaceDesc.textContent = "ENLACES";
+
+    popup.querySelector(".pp-main-details-social").appendChild(enlaceContent);
+    popup.querySelector(".pp-social-title").appendChild(enlaceDesc);
+
+    var contEnlace = document.createElement("div");
+    contEnlace.classList.add("pp-enlace");
+    var descEnlace = document.createElement("a");
+    descEnlace.classList.add("glass-ug");
+    var iconEnlace = document.createElement("i");
+    iconEnlace.classList.add("bi", "bi-github");
+
+    descEnlace.href = socialContent.textContent.trim();
+    // descEnlace.textContent = socialContent.textContent.trim();
+
+    popup.querySelector(".pp-main-details-social").appendChild(contEnlace);
+    popup.querySelector(".pp-enlace").appendChild(descEnlace);
+    descEnlace.appendChild(iconEnlace);
+    // popup.querySelector(".pp-main-details-social").textContent = descEnlace;
   }
-
-  // projectDetailsBtn.addEventListener("click", () => {
-  //   popupDetailsToggle();
-  // });
-
-  // function popupDetailsToggle() {
-  //   if (projectDetailsContainer.classList.contains("active")) {
-  //     projectDetailsBtn.querySelector("i").classList.add("fa-plus");
-  //     projectDetailsBtn.querySelector("i").classList.remove("fa-minus");
-  //     projectDetailsContainer.classList.remove("active");
-  //     projectDetailsContainer.style.maxHeight = 0 + "px";
-  //   } else {
-  //     projectDetailsBtn.querySelector("i").classList.remove("fa-plus");
-  //     projectDetailsBtn.querySelector("i").classList.add("fa-minus");
-  //     projectDetailsContainer.classList.add("active");
-  //     projectDetailsContainer.style.maxHeight =
-  //       projectDetailsContainer.scrollHeight + "px";
-  //     popup.scrollTo(200, projectDetailsContainer.offsetTop);
-  //   }
-  //   if (projectDetailsContainer.classList.contains("active")) {
-  //     popup.classList.add("show-scroll");
-  //   } else {
-  //     popup.classList.remove("show-scroll");
-  //   }
-  // }
+  // ----- ENLACES
 
   // NEXT SLIDE
   nextBtn.addEventListener("click", () => {
@@ -339,19 +342,24 @@
     popupSlideShow();
   });
 
-  // CLOSE BTN
-  closeBtn.addEventListener("click", () => {
-    // popupToggle();
+  // FUNCION CERRAR
+  function close() {
     popup.classList.remove("open");
 
     popup.querySelector(".pp-main-description").innerHTML = "";
     popup.querySelector(".pp-main-details-elements").innerHTML = "";
+  }
 
-    // if (projectDetailsContainer.classList.contains("active")) {
-    //   popupDetailsToggle();
-    // }
+  // CLOSE BTN
+  closeBtn.addEventListener("click", () => {
+    close();
   });
 
+  document.addEventListener("keydown", function (event) {
+    if (event.keyCode === 27) {
+      close();
+    }
+  });
   // END PORTFOLIO FILTER AND POPUP
 
   // TESTIMONIAL
