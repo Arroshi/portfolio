@@ -259,13 +259,15 @@
 
     popup.querySelector(".pp-main-description").appendChild(descContent);
 
+    // ----- RESUMEN
+
+    // ----- HERRAMIENTAS
+
     // // obtener los elementos usados en el project
     const detailsContent = portfolioItems[itemIndex].querySelectorAll(
       ".portfolio-item-elements span"
     );
-    // ----- RESUMEN
 
-    // ----- HERRAMIENTAS
     var elementContent = document.createElement("div");
     elementContent.classList.add("pp-elements-title");
     var elementDesc = document.createElement("h3");
@@ -293,32 +295,29 @@
     // ----- HERRAMIENTAS
 
     // ----- ENLACES
-    const socialContent = portfolioItems[itemIndex].querySelector(
-      ".portfolio-item-social"
+    const socialContent = portfolioItems[itemIndex].querySelectorAll(
+      ".portfolio-item-social a"
     );
 
     var enlaceContent = document.createElement("div");
     enlaceContent.classList.add("pp-social-title");
     var enlaceDesc = document.createElement("h3");
     enlaceDesc.textContent = "ENLACES";
-
     popup.querySelector(".pp-main-details-social").appendChild(enlaceContent);
     popup.querySelector(".pp-social-title").appendChild(enlaceDesc);
 
     var contEnlace = document.createElement("div");
     contEnlace.classList.add("pp-enlace");
-    var descEnlace = document.createElement("a");
-    descEnlace.classList.add("glass-ug");
-    var iconEnlace = document.createElement("i");
-    iconEnlace.classList.add("bi", "bi-github");
-
-    descEnlace.href = socialContent.textContent.trim();
-    // descEnlace.textContent = socialContent.textContent.trim();
-
     popup.querySelector(".pp-main-details-social").appendChild(contEnlace);
-    popup.querySelector(".pp-enlace").appendChild(descEnlace);
-    descEnlace.appendChild(iconEnlace);
-    // popup.querySelector(".pp-main-details-social").textContent = descEnlace;
+
+    socialContent.forEach((element) => {
+      element.classList.add("glass-ug");
+
+      console.log(element);
+
+      // popup.querySelector(".pp-enlace").appendChild(element.outerHTML);
+      popup.querySelector(".pp-enlace").innerHTML += element.outerHTML;
+    });
   }
   // ----- ENLACES
 
@@ -348,6 +347,7 @@
 
     popup.querySelector(".pp-main-description").innerHTML = "";
     popup.querySelector(".pp-main-details-elements").innerHTML = "";
+    popup.querySelector(".pp-main-details-social").innerHTML = "";
   }
 
   // CLOSE BTN

@@ -1529,6 +1529,10 @@ h2:before {
   border-radius: 12px;
 }
 
+.portfolio-popup .pp-main-inner .pp-main-details-social .pp-enlace {
+  display: flex;
+  gap: 10px;
+}
 .portfolio-popup .pp-main-inner .pp-main-details-social .pp-enlace a {
   padding: 10px 15px;
   border-radius: 12px;
