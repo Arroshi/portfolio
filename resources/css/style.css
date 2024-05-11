@@ -1337,13 +1337,12 @@ h2:before {
   left: 0;
   top: 0;
   height: 100%;
-  width: 100%;
+  width: calc(100% - 40px);
   z-index: 1005;
   color: var(--bg--opacity);
   background-color: var(--color-theme);
-  /* background-color: var(--glass-bg); */
-  /* backdrop-filter: blur(10px); */
   border-radius: 20px;
+  margin: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
