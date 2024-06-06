@@ -568,6 +568,10 @@ h2:before {
 .home-section .home-img {
 }
 
+.home-section .btn-footer a {
+  text-decoration: none;
+}
+
 .home-section .home-text p {
   color: var(--skin-color-2);
   font-size: 20px;
@@ -729,6 +733,7 @@ h2:before {
 
 .about-section .about-info .btn-style {
   margin: 30px 20px;
+  text-decoration: none;
 }
 
 .about-section .personal-info {
@@ -1334,15 +1339,14 @@ h2:before {
 
 .portfolio-popup .pp-loader {
   position: absolute;
-  left: 0;
   top: 0;
-  height: 100%;
-  width: calc(100% - 40px);
+  right: 0;
+  left: 0;
+  bottom: 0;
   z-index: 1005;
   color: var(--bg--opacity);
-  background-color: var(--color-theme);
-  border-radius: 20px;
-  margin: 20px;
+  background-color: rgb(43 43 43);
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1499,6 +1503,14 @@ h2:before {
   width: calc(70% - 10px);
 }
 
+.portfolio-popup .pp-main-inner .pp-main-content .pp-container {
+  position: relative;
+  width: 100%;
+  border: 20px solid transparent;
+  padding: 0;
+  overflow: hidden;
+}
+
 .portfolio-popup .pp-main-inner .pp-main-details {
   /* flex: 0 0 40%; */
   width: calc(30% - 10px);
@@ -1542,8 +1554,9 @@ h2:before {
 .portfolio-popup .pp-img {
   width: 100%;
   max-width: 100%;
-  height: 550px;
-  border-radius: 40px;
+  height: 100%;
+  border-radius: 10px;
+  padding: 0;
 }
 
 .portfolio-popup .pp-project-details-btn {
