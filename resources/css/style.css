@@ -623,6 +623,7 @@ h2:before {
 
 .home-section .home-text .btn-style {
   margin-top: 30px;
+  text-decoration: none;
 }
 
 /* END HOME SECTION */
@@ -858,17 +859,17 @@ h2:before {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-around; */
+  justify-content: space-evenly;
   margin-top: 1.5rem;
   gap: 1rem;
 }
 
-.about-section .tab-content .tec-habilities {
+/* .about-section .tab-content .tec-habilities {
   justify-content: flex-start;
 }
 .about-section .tab-content .pro-habilities {
   justify-content: flex-end;
-}
+} */
 
 .hab-item {
   cursor: pointer;
