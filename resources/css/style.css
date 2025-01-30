@@ -32,6 +32,7 @@ section {
   display: flex;
   align-items: center; */
 }
+
 .hide-scroll {
   overflow-y: hidden;
 }
@@ -120,6 +121,7 @@ img {
 .justify-between {
   justify-content: space-between;
 }
+
 .justify-around {
   justify-content: space-around;
 }
@@ -285,10 +287,12 @@ h2:before {
 }
 
 @keyframes preLoader {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-30px);
   }
@@ -565,8 +569,7 @@ h2:before {
 }
 
 .home-section .home-text,
-.home-section .home-img {
-}
+.home-section .home-img {}
 
 .home-section .btn-footer a {
   text-decoration: none;
@@ -587,6 +590,7 @@ h2:before {
   margin: 0;
   font-style: oblique;
 }
+
 .home-section .home-text .title h3 {
   color: var(--color-prin);
   font-size: 20px;
@@ -675,6 +679,7 @@ h2:before {
   transition: all 0.3s ease;
   cursor: pointer;
 }
+
 .about-section .about-img .social-link a i {
   cursor: pointer;
 }
@@ -891,6 +896,7 @@ h2:before {
     opacity: 0;
     transform: translateY(-25px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0px);
@@ -1020,10 +1026,7 @@ h2:before {
   margin: 0 0 10px;
 }
 
-.about-section
-  .timeline
-  .timeline-item:nth-child(odd)
-  .timeline-item-inner::before {
+.about-section .timeline .timeline-item:nth-child(odd) .timeline-item-inner::before {
   /* right: -50px;
   content: "";
   position: absolute;
@@ -1035,10 +1038,7 @@ h2:before {
   z-index: -1; */
 }
 
-.about-section
-  .timeline
-  .timeline-item:nth-child(even)
-  .timeline-item-inner::before {
+.about-section .timeline .timeline-item:nth-child(even) .timeline-item-inner::before {
   /* left: -50px;
   content: "";
   position: absolute;
@@ -1286,6 +1286,7 @@ h2:before {
   gap: 10px;
   color: var(--color-prin);
 }
+
 .portfolio-section .portfolio-item-details .btn-details i {
   font-size: 20px;
 }
@@ -1373,6 +1374,7 @@ h2:before {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -1532,11 +1534,7 @@ h2:before {
   gap: 10px;
 }
 
-.portfolio-popup
-  .pp-main-inner
-  .pp-main-details-elements
-  .pp-elements-content
-  .glass-ug {
+.portfolio-popup .pp-main-inner .pp-main-details-elements .pp-elements-content .glass-ug {
   padding: 10px 15px;
   border-radius: 12px;
 }
@@ -1545,6 +1543,7 @@ h2:before {
   display: flex;
   gap: 10px;
 }
+
 .portfolio-popup .pp-main-inner .pp-main-details-social .pp-enlace a {
   padding: 10px 15px;
   border-radius: 12px;
@@ -1858,6 +1857,7 @@ h2:before {
 .glass-bg {
   background-color: var(--glass-bg);
 }
+
 .glass-ug {
   background-color: var(--glass-ug);
 }
